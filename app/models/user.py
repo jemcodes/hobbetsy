@@ -1,4 +1,5 @@
 from .db import db
+# from .cart import Cart
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
@@ -11,6 +12,9 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
     gold = db.Column(db.Integer, nullable=False)
+    cart = db.relationship("Cart", back_populates="user")
+    reviews = db.relationship("Review", back_populates="user")
+    favorites = db.relationship("Favorite", back_populates="user")
 
     @property
     def password(self):
@@ -27,5 +31,6 @@ class User(db.Model, UserMixin):
         return {
           "id": self.id,
           "username": self.username,
-          "email": self.email
+          "email": self.email,
+          "gold": self.gold
         }
