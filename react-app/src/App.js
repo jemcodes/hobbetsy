@@ -9,7 +9,11 @@ import UsersList from "./components/UsersList";
 import User from "./components/User";
 import Product from "./components/Product"
 import SingleProduct from "./components/SingleProduct"
+import Review from "./components/Review";
 import Cart from "./components/Cart"
+import CreateReview from "./components/CreateReview";
+import EditReview from "./components/EditReview";
+import Favorite from "./components/Favorite";
 import { authenticate } from "./store/session";
 
 function App() {
@@ -44,11 +48,23 @@ function App() {
         <ProtectedRoute path="/users/:userId" exact={true} >
           <User />
         </ProtectedRoute>
+        <ProtectedRoute path="/users/:userId/favorites" exact={true} >
+          <Favorite />
+        </ProtectedRoute>
         <ProtectedRoute path="/" exact={true} >
           <Product />
         </ProtectedRoute>
         <ProtectedRoute path="/products/:productId" exact={true} >
           <SingleProduct />
+        </ProtectedRoute>
+        <ProtectedRoute path="/products/:productId/reviews" exact={true} >
+          <Review />
+        </ProtectedRoute>
+        <ProtectedRoute path="/products/:productId/reviews/new" exact={true} >
+          <CreateReview />
+        </ProtectedRoute>
+        <ProtectedRoute path="/products/:productId/reviews/:reviewId/update" exact={true} >
+          <EditReview />
         </ProtectedRoute>
         <ProtectedRoute path="/cart" exact={true} >
           <Cart />
