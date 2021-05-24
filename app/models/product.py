@@ -15,6 +15,8 @@ class Product(db.Model):
     category_id = db.Column(db.Integer, db.ForeignKey('categories.id'))
     categories = db.relationship("Category", back_populates="products")
     cart = db.relationship("Cart", back_populates="products")
+    review = db.relationship("Review", back_populates="products")
+    favorites = db.relationship("Favorite", back_populates="product")
 
 def to_dict(self):
   return{

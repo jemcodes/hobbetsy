@@ -13,6 +13,8 @@ class User(db.Model, UserMixin):
     hashed_password = db.Column(db.String(255), nullable=False)
     gold = db.Column(db.Integer, nullable=False)
     cart = db.relationship("Cart", back_populates="user")
+    reviews = db.relationship("Review", back_populates="user")
+    favorites = db.relationship("Favorite", back_populates="user")
 
     @property
     def password(self):
