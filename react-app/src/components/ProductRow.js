@@ -14,9 +14,11 @@ function ProductRow({ productList }) {
     return (
         <div>
             <ul>
-                {productList.map((product) =>
-                    (<li key={product.id}>{product.title}</li>)
-                )}
+                <li>{product1.title}</li>
+                <li>{product2.title}</li>
+                <li>{product3.title}</li>
+                <li>{product4.title}</li>
+                <li>Patrick is a goober</li>
             </ul>
         </div>
     )

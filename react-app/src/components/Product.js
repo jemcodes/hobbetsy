@@ -16,9 +16,9 @@ function Product() {
     console.log('component', productList)
 
 
-    useEffect(() => {
-        dispatch(displayProducts());
-    }, [dispatch])
+    // useEffect(() => {
+    //     dispatch(displayProducts());
+    // }, [dispatch])
 
     return (
         <div>
