@@ -8,8 +8,8 @@ class Category(db.Model):
   category = db.Column(db.String(254), nullable=False)
   products = db.relationship("Product", back_populates="categories")
 
-def to_dict(self):
-  return{
-    "id": self.id,
-    "category": self.category,
-  }
+  def to_dict(self):
+    return{
+      "id": self.id,
+      "category": self.category,
+    }

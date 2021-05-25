@@ -18,14 +18,14 @@ class Product(db.Model):
     review = db.relationship("Review", back_populates="products")
     favorites = db.relationship("Favorite", back_populates="product")
 
-def to_dict(self):
-  return{
-    "id": self.id,
-    "title": self.title,
-    "image": self.image,
-    "price": self.price,
-    "description": self.description,
-    "lore": self.lore,
-    "quantity": self.quantity,
-    "categories": self.categories
-  }
+    def to_dict(self):
+      return{
+        "id": self.id,
+        "title": self.title,
+        "image": self.image,
+        "price": self.price,
+        "description": self.description,
+        "lore": self.lore,
+        "quantity": self.quantity,
+        # "categories": self.categories
+      }
