@@ -2,10 +2,10 @@
 const GET_PRODUCTS = "products/GET_PRODUCTS"
 
 //action creator
-const getProducts = (allproducts) => {
+const getProducts = (list) => {
   return {
     type: GET_PRODUCTS,
-    payload: allproducts
+    list
   }
 }
 
@@ -20,7 +20,13 @@ export const displayProducts = () => async (dispatch) => {
   }
 }
 
-const initialState = [];
+const initialState = {
+  list: [],
+};
+
+const sortList = list => {
+  return list.map(product => product.id)
+}
 
 //reducer
 export default function productReducer(state = initialState, action) {
@@ -36,16 +42,17 @@ export default function productReducer(state = initialState, action) {
     //     productsList: action.allproducts
     //   }
 
-      case GET_PRODUCTS:
-        const nextState = {}
-        action.payload.products.forEach(product => {
-          nextState[product.title] = product
-        })
-        return {
-          ...state,
-          ...nextState
-        };
-      // return { allproducts: action.payload }
+    case GET_PRODUCTS:
+      const nextState = {}
+      action.list.products.forEach(product => {
+        nextState[product.id] = product
+      })
+      return {
+        ...state,
+        ...nextState,
+        list: sortList(action.list.products)
+      };
+    // return { allproducts: action.payload }
     default:
       return state;
   }

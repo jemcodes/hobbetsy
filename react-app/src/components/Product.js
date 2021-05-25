@@ -5,12 +5,18 @@ import { displayProducts } from '../store/product';
 
 function Product() {
     const dispatch = useDispatch();
-    const productList = useSelector(state => state.products);
-    console.log(productList)
+    const productList = useSelector(state => {
+        return state.products.list.map(productId => state.products[productId])
+    });
+
+
+    console.log('component', productList)
+
+
     useEffect(() => {
         dispatch(displayProducts());
     }, [dispatch])
-    
+
     return (
         <div>
             <h1>HOBBETSY</h1>
