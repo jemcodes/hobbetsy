@@ -16,6 +16,7 @@ def seed_reviews():
     Eleven = Review(rating=5, review="Is it nice? Yesss. Is it juicy?? Whyyy, yesss it isss! It was scrumptiously crunchable!", user_id=12, product_id=2)
     Twelve = Review(rating=5, review="May the wind under your wings bear you where the sun sails and the moon walks. And yeah you wanna buy this. It's good stuff", user_id=16, product_id=1)
     Thirteen = Review(rating=1, review="Gave it a one because I cannot give it a zero. Beware The mines! Beware of the Sea!", user_id=2, product_id=5)
+    #Fourteen = Review(rating=5, review="", user_id=, product_id=7)
 
     db.session.add(One)
     db.session.add(Two)

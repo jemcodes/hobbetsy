@@ -22,6 +22,7 @@ def seed_users():
     radagast = User(username='RadagastTheBrown', email='demo15@aa.io', password='password', gold=700)
     elrond = User(username='Elrond', email='demo16@aa.io', password='password', gold=900)
     galadriel = User(username='Galadriel', email='demo17@aa.io', password='password', gold=900)
+    #ent = User(username="mynameistoolongforIamanEnt", email=demo18@aa.io, password='password', gold=500)
 
     db.session.add(demo)
     db.session.add(gimli)
