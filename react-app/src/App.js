@@ -14,6 +14,7 @@ import Cart from "./components/Cart"
 import CreateReview from "./components/CreateReview";
 import EditReview from "./components/EditReview";
 import Favorite from "./components/Favorite";
+import { displayProducts } from './store/product';
 import { authenticate } from "./store/session";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   useEffect(() => {
     (async () => {
       await dispatch(authenticate());
+      await dispatch(displayProducts());
       setLoaded(true);
     })();
   }, []);
