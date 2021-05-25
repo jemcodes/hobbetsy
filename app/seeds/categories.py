@@ -1,12 +1,12 @@
-from app.models import db, Category
+from app.models import category, db, Category
 
 
 def seed_categories():
 
-    weapons = Category('Weapons')
-    shields = Category('Shields')
-    armor = Category('Armor')
-    food_and_drink = Category('Food and Drink')
+    weapons = Category(category='Weapons')
+    shields = Category(category='Shields')
+    armor = Category(category='Armor')
+    food_and_drink = Category(category='Food and Drink')
 
     db.session.add(weapons)
     db.session.add(shields)

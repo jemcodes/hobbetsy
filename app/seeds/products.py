@@ -298,9 +298,9 @@ def seed_products():
     db.session.add(gollum_grog)
     db.session.add(potatoes)
 
-    db.commit()
+    db.session.commit()
 
 
-def undo_users():
+def undo_products():
     db.session.execute('TRUNCATE products RESTART IDENTITY CASCADE;')
     db.session.commit()
