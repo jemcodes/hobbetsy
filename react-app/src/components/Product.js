@@ -5,21 +5,21 @@ import { displayProducts } from '../store/product';
 
 function Product() {
     const dispatch = useDispatch();
-    const productList = useSelector(state => state.products.productsList);
+    const productList = useSelector(state => state.products);
     console.log(productList)
     useEffect(() => {
         dispatch(displayProducts());
     }, [dispatch])
-
+    
     return (
         <div>
             <h1>HOBBETSY</h1>
             <h2>Products</h2>
-            {/* <ul>
+            <ul>
                 {productList && productList.map((product) =>
                     (<li key={product.id}>{product.title}</li>)
                 )}
-            </ul> */}
+            </ul>
         </div>
 
     )
