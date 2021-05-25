@@ -17,10 +17,10 @@ function FeatureRow() {
         <div>
             <h1>FEATURE ROW</h1>
             <ul>
-                <li>{feature1.title}</li>
-                <li>{feature2.title}</li>
-                <li>{feature3.title}</li>
-                <li>{feature4.title}</li>
+                <NavLink to={`/products/${feature1.id}`}><li>{feature1.title}</li></NavLink>
+                <NavLink to={`/products/${feature2.id}`}><li>{feature2.title}</li></NavLink>
+                <NavLink to={`/products/${feature3.id}`}><li>{feature3.title}</li></NavLink>
+                <NavLink to={`/products/${feature4.id}`}><li>{feature4.title}</li></NavLink>
             </ul>
         </div>
     )

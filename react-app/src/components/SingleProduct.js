@@ -13,6 +13,8 @@ function SingleProduct() {
             <p>{product.description}</p>
             <p>{product.image}</p>
             <img src={`${product.image}`} alt="" />
+            <p>{product.lore}</p>
+            {/* PUT REVIEW COMPONENT HERE */}
         </div>
     )
 }
