@@ -33,7 +33,7 @@ def product_reviews(id):
 
 
 @product_routes.route('/<int:id>/reviews', methods=['POST'])
-# @login_required
+@login_required
 def add_product_review(id):
     form = ReviewForm()
     form['csrf_token'].data = request.cookies['csrf_token']
@@ -53,8 +53,11 @@ def add_product_review(id):
 
 
 # @product_routes.route('/<int:id>/reviews/<int:review_id>', methods=['PUT'])
-# # @login_required
+# @login_required
 # def edit_product_review(id, review_id):
+#     form = ReviewForm()
+#     review = Review.query.get(1)
+
 #     return f'This is product id {id} and review id {review_id}!'
 
 
