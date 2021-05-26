@@ -26,9 +26,10 @@ def user(id):
 @user_routes.route('/<int:id>/cart')
 @login_required
 def cart(id):
-    items = Cart.query.filter(Cart.user_id == id).join(User, User.id == Cart.user_id).all()
+    # items = Cart.query.filter(Cart.user_id == id).join(User, User.id == Cart.user_id).all()
+    carts = Cart.query.all()
     # return {"reviews": [review.user.username for review in reviews]}
-    return {"items": [cart.to_dict() for item in items]}
+    return {"carts": [cart.to_dict() for cart in carts]}
 
 
 @user_routes.route('/<int:id>/cart/products/<int:product_id>', methods=['POST'])

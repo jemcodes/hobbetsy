@@ -6,22 +6,26 @@ import { displayItems } from '../store/cart';
 function Cart() {
     const dispatch = useDispatch();
     const userId = useSelector(state => state.session.user.id)
+
+    // useEffect(() => {
+    //     dispatch(displayItems(userId));
+    // }, [dispatch, userId])
+
     const itemList = useSelector(state => {
         return state.cart.list.map(cartId => state.cart[cartId])
     });
+    console.log(itemList)
     // const allCartItems = ({
     //     user_id,
     //     product_id,
     //     products
     // }) => dispatch()
 
-     useEffect(() => {
-         dispatch(displayItems(userId));
-     }, [dispatch, userId])
+
 
     return (
         <div>
-            <h1>{itemList.user_id}</h1>
+            <h1>Item List: {itemList}</h1>
         </div>
     )
 }
