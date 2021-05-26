@@ -29,7 +29,7 @@ function Review() {
         <div>
             <h1>Reviews</h1>
             {reviewList.map(review => (
-                <SingleReview review={review} />
+                <SingleReview review={review} productId={productId} />
             ))}
         </div>
     )
