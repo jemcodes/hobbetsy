@@ -5,6 +5,7 @@ import { displayProducts } from '../store/product';
 import Categories from './Categories';
 import SingleProduct from './SingleProduct';
 import ProductRow from './ProductRow';
+import ProductRowBottom from './ProductRowBottom';
 import FeatureRow from './FeatureRow';
 
 function Product() {
@@ -28,7 +29,7 @@ function Product() {
             {/* <Categories /> */}
             {<ProductRow />}
             {<FeatureRow />}
-            {<ProductRow />}
+            {<ProductRowBottom />}
         </div>
 
     )
