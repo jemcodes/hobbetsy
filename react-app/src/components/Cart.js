@@ -11,7 +11,7 @@ function Cart() {
     //     dispatch(displayItems(userId));
     // }, [dispatch, userId])
 
-    
+
     const itemList = useSelector(state => {
         console.log('CHECKING STATE', state.cart[1])
         return state.cart[1]
@@ -27,7 +27,9 @@ function Cart() {
 
     return (
         <div>
-            <h1>Item List: {itemList}</h1>
+            <p>Cart ID: {itemList.id}</p>
+            <p>Product ID: {itemList.product_id}</p>
+            <p>User ID: {itemList.user_id}</p>
         </div>
     )
 }
