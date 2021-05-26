@@ -27,11 +27,11 @@ function Cart() {
 
     return (
         <div>
-            <p>Cart ID: {itemList.id}</p>
-            <p>Product ID: {itemList.product_id}</p>
-            <p>User ID: {itemList.user_id}</p>
-            <p>Product Title: {itemList.product_title}</p>
-            <img src={`${itemList.product_image}`} />
+            <p>Cart ID: {itemList?.id}</p>
+            <p>Product ID: {itemList?.product_id}</p>
+            <p>User ID: {itemList?.user_id}</p>
+            <p>Product Title: {itemList?.product_title}</p>
+            <img src={`${itemList?.product_image}`} />
         </div >
     )
 }
