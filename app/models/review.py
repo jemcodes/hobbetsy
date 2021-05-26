@@ -18,5 +18,6 @@ class Review(db.Model):
       "rating": self.rating,
       "review": self.review,
       "user_id": self.user_id,
-      "product_id": self.product_id
+      "product_id": self.product_id,
+      "user": self.user.username
     }
