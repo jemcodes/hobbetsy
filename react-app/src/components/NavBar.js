@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
 import Search from './Search';
+import Cart from './Cart';
+import cart from '../images/cart.png';
 
 const NavBar = () => {
   return (
@@ -29,6 +31,11 @@ const NavBar = () => {
         </li>
         <li>
           <Search />
+        </li>
+        <li>
+          <NavLink to="/cart" exact={true} activeClassName="active">
+            <img src={cart} width="50px"/>
+          </NavLink>
         </li>
         <li>
           <LogoutButton />
