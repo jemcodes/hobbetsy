@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from 'react-redux';
 import { useParams } from "react-router-dom";
 import { displayProducts } from '../store/product';
+import Review from "./Review.js"
 
 function SingleProduct() {
     const { productId } = useParams()
@@ -14,7 +15,7 @@ function SingleProduct() {
             <p>{product.image}</p>
             <img src={`${product.image}`} alt="" />
             <p>{product.lore}</p>
-            {/* PUT REVIEW COMPONENT HERE */}
+            <Review />
         </div>
     )
 }
