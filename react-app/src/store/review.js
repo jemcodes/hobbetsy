@@ -22,24 +22,24 @@ export const displayReviews = (id) => async (dispatch) => {
     console.log("I.......D........", id)
     const response = await fetch(`/api/products/${id}/reviews`);
     console.log("THUNKINESS", response)
-    if(response.ok){
+    if (response.ok) {
         const data = await response.json();
         dispatch(getReviews(data))
     }
 }
 
 export const createReview = (payload) => async (dispatch) => {
-    const { rating, review, productId} = payload;
+    const { rating, review, productId } = payload;
     console.log("RRI---------", rating, review, productId)
     const response = await fetch(`/api/products/${productId}/reviews`, {
         method: "POST",
         headers: {
-            "Content-Type":"application/json",
+            "Content-Type": "application/json",
         },
-        body: JSON.stringify(rating, review)
+        body: JSON.stringify(payload)
     })
-    console.log("RESPONSE------RESponce",response)
-    if(response.ok){
+    console.log("RESPONSE------RESponce", response)
+    if (response.ok) {
         const data = await response.json();
         dispatch(postReview(data))
     }
@@ -68,8 +68,8 @@ export default function reviewReducer(state = initialState, action) {
                 list: sortList(action.list.reviews)
             };
         case POST_REVIEW:
-            return {...state, ...action.payload}
+            return { ...state, ...action.payload }
         default:
             return state;
-        }
     }
+}

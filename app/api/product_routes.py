@@ -1,5 +1,5 @@
 from app.forms.review_form import ReviewForm
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 from flask_login import login_required, current_user
 from app.models import db, Product, Review, User
 
@@ -26,27 +26,30 @@ def products():
 @product_routes.route('/<int:id>/reviews')
 @login_required
 def product_reviews(id):
-    reviews = Review.query.filter(Review.product_id == id).join(User, User.id == Review.user_id).all()
+    reviews = Review.query.filter(Review.product_id == id).join(
+        User, User.id == Review.user_id).all()
     # return {"reviews": [review.user.username for review in reviews]}
     return {"reviews": [review.to_dict() for review in reviews]}
 
 
 @product_routes.route('/<int:id>/reviews', methods=['POST'])
-@login_required
+# @login_required
 def add_product_review(id):
     form = ReviewForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    # print(f'I am a review {newReview}')
     if form.validate_on_submit():
-        data = form.data
         new_review = Review(
-            rating=data['rating'],
-            review=data['review'],
-            product_id=id,
+            rating=form.data['rating'],
+            review=form.data['review'],
+            product_id=form.data["productId"],
             user_id=current_user.id
         )
-        print("NEW REVIEW", new_review)
         db.session.add(new_review)
         db.session.commit()
-    return "ok"
+        print("NEW REVIEW", new_review)
+        return new_review.to_dict()
+    return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 
 # @product_routes.route('/<int:id>/reviews/<int:review_id>', methods=['PUT'])
