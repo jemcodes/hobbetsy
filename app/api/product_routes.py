@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from flask_login import login_required
-from app.models import Product, Review
+from app.models import Product, Review, User
 
 product_routes = Blueprint('products', __name__)
 
@@ -25,8 +25,10 @@ def products():
 @product_routes.route('/<int:id>/reviews')
 @login_required
 def product_reviews(id):
-    reviews = Review.query.filter(Review.product_id == id).all()
+    reviews = Review.query.filter(Review.product_id == id).join(User, User.id == Review.user_id).all()
+    # return {"reviews": [review.user.username for review in reviews]}
     return {"reviews": [review.to_dict() for review in reviews]}
+
 
 
 # @product_routes.route('/<int:id>/reviews', methods=['POST'])
