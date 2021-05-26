@@ -1,6 +1,7 @@
+from app.forms.review_form import ReviewForm
 from flask import Blueprint, jsonify
-from flask_login import login_required
-from app.models import Product, Review, User
+from flask_login import login_required, current_user
+from app.models import db, Product, Review, User
 
 product_routes = Blueprint('products', __name__)
 
@@ -30,11 +31,22 @@ def product_reviews(id):
     return {"reviews": [review.to_dict() for review in reviews]}
 
 
-
-# @product_routes.route('/<int:id>/reviews', methods=['POST'])
-# # @login_required
-# def add_product_review(id):
-#     return 'THESE ARE REVIEWS!'
+@product_routes.route('/<int:id>/reviews', methods=['POST'])
+@login_required
+def add_product_review(id):
+    form = ReviewForm()
+    if form.validate_on_submit():
+        data = form.data
+        new_review = Review(
+            rating=data['rating'],
+            review=data['review'],
+            product_id=id,
+            user_id=current_user.id
+        )
+        print("NEW REVIEW", new_review)
+        db.session.add(new_review)
+        db.session.commit()
+    return "ok"
 
 
 # @product_routes.route('/<int:id>/reviews/<int:review_id>', methods=['PUT'])
