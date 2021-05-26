@@ -11,7 +11,6 @@ function SingleProduct() {
         <div>
             <h3>{product.title}</h3>
             <p>{product.description}</p>
-            <p>{product.image}</p>
             <img src={`${product.image}`} alt="" />
         </div>
     )
