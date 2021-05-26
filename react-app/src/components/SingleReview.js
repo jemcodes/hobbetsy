@@ -26,13 +26,13 @@ function SingleReview({ review, productId }) {
     }
 
     return (
-        <div key={review.id}>
-            <div>{review.user}</div>
-            <div>{review.rating}</div>
-            <div>{review.review}</div>
-            {user.id === review.user_id && <button id={review.id} onClick={editButton}>Edit</button>}
-            {user.id === review.user_id && <button onClick={deleteButton}>Delete</button>}
-            {editable && <EditReviewForm reviewId={review.id} editable={editable} setEditable={setEditable} />}
+        <div key={review?.id}>
+            <div>{review?.user}</div>
+            <div>{review?.rating}</div>
+            <div>{review?.review}</div>
+            {user.id === review?.user_id && <button id={review?.id} onClick={editButton}>Edit</button>}
+            {user.id === review?.user_id && <button onClick={deleteButton}>Delete</button>}
+            {editable && <EditReviewForm reviewId={review?.id} editable={editable} setEditable={setEditable} />}
         </div>
     )
 }

@@ -79,9 +79,8 @@ export const deleteReviewThunk = (deletePayload) => async (dispatch) => {
         })
     })
     if(response.ok){
-        await response.json();
         console.log("RESPONSE IS OKAY")
-        // dispatch(deleteReview(id));
+        dispatch(deleteReview(reviewId));
         // return response
         return "ok"
     }
@@ -112,10 +111,10 @@ export default function reviewReducer(state = initialState, action) {
         case POST_REVIEW:
             return { ...state, ...action.payload };
 
-        // case DELETE_REVIEW:
-        //     const nextState = { ...state }
-        //     delete nextState[action.deletePayload.reviewId]
-        //     return nextState
+        case DELETE_REVIEW:
+            const lastState = { ...state }
+            delete lastState[action.deletePayload]
+            return lastState
 
         default:
             return state;

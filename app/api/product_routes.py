@@ -72,7 +72,7 @@ def edit_product_review(id, review_id):
 @product_routes.route('/<int:id>/reviews/<int:review_id>', methods=['DELETE'])
 @login_required
 def delete_product_review(id, review_id):
-    print(f'DATA REQUEST {id , review_id}')
+    print(f'----------DATA REQUEST---------------- {id , review_id}')
     review_to_delete = Review.query.get(review_id)
     db.session.delete(review_to_delete)
     db.session.commit()
