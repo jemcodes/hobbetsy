@@ -38,7 +38,7 @@ function App() {
         await dispatch(displayItems(user.id));
       }
     })();
-  }, []);
+  }, [dispatch, user]);
 
   if (!loaded) {
     return null;

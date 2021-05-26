@@ -11,8 +11,10 @@ function Cart() {
     //     dispatch(displayItems(userId));
     // }, [dispatch, userId])
 
+    
     const itemList = useSelector(state => {
-        return state.cart.list.map(cartId => state.cart[cartId])
+        console.log('CHECKING STATE', state.cart[1])
+        return state.cart[1]
     });
     console.log(itemList)
     // const allCartItems = ({
