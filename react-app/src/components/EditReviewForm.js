@@ -5,13 +5,11 @@ import { updateReview } from "../store/review";
 import { displayReviews } from "../store/review"
 
 function EditReviewForm(props) {
-    const { reviewId } = props
+    const { reviewId, setEditable, editable } = props
     const reviewProp = useSelector(state => state.reviews[reviewId]);
     const [rating, setRating] = useState(reviewProp.rating);
     const [review, setReview] = useState(reviewProp.review);
-    const [errors, setErrors] = useState([]);
-    const user = useSelector(state => state.session.user);
-    // console.log(reviewProp)
+
     const dispatch = useDispatch();
 
     const { productId } = useParams()
@@ -31,6 +29,7 @@ function EditReviewForm(props) {
 
         setRating(1)
         setReview("")
+        setEditable(!editable)
     };
 
     const updateRating = (e) => {
