@@ -16,7 +16,7 @@ function Cart() {
         console.log('CHECKING STATE', state.cart[1])
         return state.cart[1]
     });
-    console.log(itemList)
+    console.log("ITEM LIST:", itemList)
     // const allCartItems = ({
     //     user_id,
     //     product_id,
@@ -30,7 +30,9 @@ function Cart() {
             <p>Cart ID: {itemList.id}</p>
             <p>Product ID: {itemList.product_id}</p>
             <p>User ID: {itemList.user_id}</p>
-        </div>
+            <p>Product Title: {itemList.product_title}</p>
+            <img src={`${itemList.product_image}`} />
+        </div >
     )
 }
 

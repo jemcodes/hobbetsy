@@ -26,7 +26,7 @@ def user(id):
 @user_routes.route('/<int:id>/cart')
 @login_required
 def cart(id):
-    carts = Cart.query.filter(Cart.user_id == id)
+    carts = Cart.query.filter(Cart.user_id == id).join(Product, Product.id == Cart.product_id).all()
     # carts = Cart.query.all()
     # return {"reviews": [review.user.username for review in reviews]}
     return {"carts": [cart.to_dict() for cart in carts]}
