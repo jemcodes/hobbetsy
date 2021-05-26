@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { createReview } from "../store/review";
+import { updateReview } from "../store/review";
 import { displayReviews } from "../store/review"
 
 function EditReviewForm(props) {
     const { reviewId } = props
-    const [rating, setRating] = useState(1);
-    const [review, setReview] = useState("");
+    const reviewProp = useSelector(state => state.reviews[reviewId]);
+    const [rating, setRating] = useState(reviewProp.rating);
+    const [review, setReview] = useState(reviewProp.review);
     const [errors, setErrors] = useState([]);
     const user = useSelector(state => state.session.user);
-    const reviewProp = useSelector(state => state.reviews[reviewId]);
     // console.log(reviewProp)
     const dispatch = useDispatch();
 
@@ -22,10 +22,11 @@ function EditReviewForm(props) {
         const payload = {
             rating,
             review,
-            productId
+            productId,
+            reviewId
         }
 
-        await dispatch(createReview(payload))
+        await dispatch(updateReview(payload))
         dispatch(displayReviews(productId))
 
         setRating(1)
@@ -36,8 +37,8 @@ function EditReviewForm(props) {
         setRating(e.target.value);
     };
 
-    const updateReview = (e) => {
-        setReview(e.target.value);
+    const updateReviewValue = (e) => {
+        setReview(e.target?.value);
     }
 
     return (
@@ -51,16 +52,15 @@ function EditReviewForm(props) {
                     step="1"
                     name="rating"
                     onChange={updateRating}
-                    value={reviewProp.rating}
+                    value={rating}
                 ></input>
             </div>
             <div>
                 <label>Review</label>
                 <textarea
-
                     name="review"
-                    onChange={updateReview}
-                    value={reviewProp.review}
+                    onChange={updateReviewValue}
+                    value={review}
                 />
             </div>
             <button type="submit">Edit Review</button>

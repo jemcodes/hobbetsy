@@ -52,13 +52,21 @@ def add_product_review(id):
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 
-# @product_routes.route('/<int:id>/reviews/<int:review_id>', methods=['PUT'])
-# @login_required
-# def edit_product_review(id, review_id):
-#     form = ReviewForm()
-#     review = Review.query.get(1)
-
-#     return f'This is product id {id} and review id {review_id}!'
+@product_routes.route('/<int:id>/reviews/<int:review_id>', methods=['PUT'])
+@login_required
+def edit_product_review(id, review_id):
+    form = ReviewForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    if form.validate_on_submit():
+        updated_review = Review.query.get(review_id)
+        updated_review.rating = form.data['rating']
+        updated_review.review = form.data['review']
+        db.session.add(updated_review)
+        db.session.commit()
+        print(f'FUNKYTOWN {updated_review}')
+        return updated_review.to_dict()
+    return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+    # return f'This is product id {id} and review id {review_id}!'
 
 
 # @product_routes.route('/<int:id>/reviews/<int:review_id>',
