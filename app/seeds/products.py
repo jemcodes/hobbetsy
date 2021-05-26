@@ -5,10 +5,9 @@ def seed_products():
 
     """SWORDS"""
     short_sword = Product(title="Short Sword",
-                          image="https://1.bp.blogspot.com/-iV-ILYgMtsg/WqgeQbw\
-                              -efI/AAAAAAAADOI/\
-                              eXxSIeSTWgwibevUdl1OtgapAZ5w3thogCLcBGAs/s1600/\
-                              Polished%2BAncient%2BSteel%2BSword.png", 
+                          image="https://1.bp.blogspot.com/-iV-ILYgMtsg/WqgeQbw-efI/\
+                          AAAAAAAADOI/eXxSIeSTWgwibevUdl1OtgapAZ5w3thogCLcBGAs/s1600/\
+                          Polished%2BAncient%2BSteel%2BSword.png",
                           price=200, description="A sword for only \
                                the very bravest of heros. It is for the Hero \
                                who is not afraid to get up close and personal \
@@ -19,10 +18,11 @@ def seed_products():
                                wielding a short sword.", quantity=2000,
                           category_id=1)
     long_sword = Product(title="Long Sword",
-                         image="https://3.bp.blogspot.com/-ZnGkRBCP3h0/Ws-\
-                         EiDXXKxI/AAAAAAAADbY/Ba6RnoNCjMsogGggwL9jp-[…]ntains%\
-                         2B56%2529%2B%2528Dwarf-craft%2BGreat%2BSword%2529.\
-                         png", price=300,
+                         image="https://3.bp.blogspot.com/-ZnGkRBCP3h0/Ws-EiDXXKxI/\
+                         AAAAAAAADbY/Ba6RnoNCjMsogGggwL9jp-35xYBo70bsQCLcBGAs/s1600/\
+                         Balanced%2BGreatsword%2Bof%2BExtermination%2B53%2B%2528of%\
+                         2Bthe%2BMountains%2B56%2529%2B%2528Dwarf-craft%2BGreat%2BSword%2529.png",
+                         price=300,
                          description="A sword perfect for\
                          your assault class hero. It can stand up to heavy \
                          blows from mid-level weapons and yet still be\
@@ -33,10 +33,10 @@ def seed_products():
                                which end of the long sword you found yourself\
                                on.", quantity=1467, category_id=1)
     broad_sword = Product(title="Broad Sword",
-                          image="https://4.bp.blogspot.com/-k_jT3_NY9uk/Ws-\
-                          EnpU4foI/AAAAAAAADcU/jKAJNf2nkngui4AKvzSG23[…]1600/\
-                          Heavy%2BBright%2BSteel%2BGreat%2BSword%2Bof%2BMight.\
-                          png", price=500, description="This weapon is\
+                          image="https://4.bp.blogspot.com/-k_jT3_NY9uk/Ws-EnpU4foI/\
+                          AAAAAAAADcU/jKAJNf2nkngui4AKvzSG23JkP7Y-L7E-QCLcBGAs/s1600/\
+                          Heavy%2BBright%2BSteel%2BGreat%2BSword%2Bof%2BMight.png",
+                          price=500, description="This weapon is\
                                 designed to counter heavily armoured enemies.\
                                 It is also helpful in cutting a path through\
                                 an enemy hoard. It is slow, heavy and will\
@@ -46,9 +46,10 @@ def seed_products():
                                 responded with the broad sword.",
                                 quantity=1298, category_id=1)
     dagger = Product(title="Dagger",
-                     image="https://3.bp.blogspot.com/-e_rp2d7fFsg/W0z9LZU0oHI/\
-                     AAAAAAAADxs/g5FTqR-x98UVVPe6E7YKtU[…]nglas%2B%2528Auger%\
-                     252C%2BDagger%2Bof%2Bthe%2BNight%2529.png", price=150,
+                     image="https://2.bp.blogspot.com/-gkan2PNlDI8/W00fVWx565I/\
+                     AAAAAAAAD08/1-vsfzw4y48U3Oo8zFJ__vwRaYFGMCxcACLcBGAs/s1600/\
+                     Dagger%2Bof%2Bthe%2BFirst%2BAge%2B59%2B%2528Reshaped%2BFA%2B65%2529.png",
+                     price=150,
                      description="If you are looking for\
                      fast look no farther than the dagger. This weapon will\
                      slice dice and cut POTATOES faster than you can say\
@@ -165,7 +166,7 @@ def seed_products():
                          is to find the perfect stone for a club. This, my\
                          friends, is it.", lore="Definitely also not found on\
                          the side of the road.", quantity=2, category_id=1)
-    night_club = Product(title="Night Club", 
+    night_club = Product(title="Night Club",
                          image="https://1.bp.blogspot.com/-x1aMsB7F06U/\
                          W1j677uh6-I/AAAAAAAAENc/8SRg83q0K88cSwMAVV1lOC[…]\
                          ZW_8QCLcBGAs/s1600/Polished%2BScout%2527s%2BGreat%\
@@ -221,7 +222,7 @@ def seed_products():
                         like armor.",
                         lore="Don't look too close.", quantity=317,
                         category_id=3)
-    full_plate_armor = Product(title="Full Plate Armor", 
+    full_plate_armor = Product(title="Full Plate Armor",
                                image="https://1.bp.blogspot.com/-ZLAkWVbFLo8/\
                                XneqlU_E98I/AAAAAAAAFlg/ZNiD7740PVQJY_gN-\
                                JmmRS6SRyyCAl7JQCLcBGAsYHQ/s1600/\
