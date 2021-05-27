@@ -33,7 +33,7 @@ def cart(id):
 
 
 @user_routes.route('/<int:id>/cart/products/<int:product_id>', methods=['POST'])
-@login_required
+# @login_required
 def add_to_cart(id, product_id):
     return f'This is the {id} and the {product_id}!'
 
