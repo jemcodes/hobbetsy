@@ -40,10 +40,12 @@ def add_to_cart(id, product_id):
     form = CartForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
+        print(f"ARE WE IN THE IF? ARE WE VALIDATING?")
         new_cart_item = Cart(
             user_id = id,
             product_id = product_id
         )
+        print(f"NEW_CART:{new_cart_item}")
         db.session.add(new_cart_item)
         db.session.commit()
         # return new_cart_item.to_dict()
