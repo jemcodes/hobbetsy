@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { createReview } from "../store/review";
+import { updateReview } from "../store/review";
 import { displayReviews } from "../store/review"
 
-function CreateReview() {
-    const [rating, setRating] = useState(1);
-    const [review, setReview] = useState("");
-    const [errors, setErrors] = useState([]);
-    const user = useSelector(state => state.session.user);
+function EditReviewForm(props) {
+    const { reviewId, setEditable, editable } = props
+    const reviewProp = useSelector(state => state.reviews[reviewId]);
+    const [rating, setRating] = useState(reviewProp.rating);
+    const [review, setReview] = useState(reviewProp.review);
+
     const dispatch = useDispatch();
 
     const { productId } = useParams()
@@ -19,22 +20,24 @@ function CreateReview() {
         const payload = {
             rating,
             review,
-            productId
+            productId,
+            reviewId
         }
 
-        await dispatch(createReview(payload))
+        await dispatch(updateReview(payload))
         dispatch(displayReviews(productId))
 
         setRating(1)
         setReview("")
+        setEditable(!editable)
     };
 
     const updateRating = (e) => {
         setRating(e.target.value);
     };
 
-    const updateReview = (e) => {
-        setReview(e.target.value);
+    const updateReviewValue = (e) => {
+        setReview(e.target?.value);
     }
 
     return (
@@ -54,15 +57,14 @@ function CreateReview() {
             <div>
                 <label>Review</label>
                 <textarea
-
                     name="review"
-                    onChange={updateReview}
+                    onChange={updateReviewValue}
                     value={review}
                 />
             </div>
-            <button type="submit">Submit Review</button>
+            <button type="submit">Edit Review</button>
         </form>
     )
 }
 
-export default CreateReview;
+export default EditReviewForm;
