@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Redirect, useHistory, useParams } from "react-router-dom";
 import { itemsAddedToCart } from '../store/cart';
 
 export default function AddingToCart() {
   const dispatch = useDispatch();
   const productId = parseInt(useParams().productId);
   const userId = useSelector(state => state.session.user.id)
+  const history = useHistory()
 
   //quantity and price
 
@@ -17,6 +18,7 @@ export default function AddingToCart() {
       userId
     }
     dispatch(itemsAddedToCart(payload))
+    history.push('/')
   }
 
   return (
