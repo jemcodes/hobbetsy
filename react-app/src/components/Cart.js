@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { displayItems } from '../store/cart';
+import CartItem from './CartItem'
 
 function Cart() {
     const dispatch = useDispatch();
@@ -12,11 +13,17 @@ function Cart() {
     // }, [dispatch, userId])
 
 
-    const itemList = useSelector(state => {
-        console.log('CHECKING STATE', state.cart[1])
-        return state.cart[1]
-    });
-    console.log("ITEM LIST:", itemList)
+    const cartList = useSelector(state => {
+        return state.cart.list.map( cartId => state.cart[cartId.id])})
+        // console.log('CHECKING STATE', state.cart[1])
+        // return state.cart[1]
+    console.log(cartList)
+    const userCart = cartList.filter( item => {
+        return item?.user_id === userId
+    })
+
+    console.log("THIS IS THE USER CART DONT MISS IT JAMIE", userCart)
+    // console.log("ITEM LIST:", itemList)
     // const allCartItems = ({
     //     user_id,
     //     product_id,
@@ -27,12 +34,10 @@ function Cart() {
 
     return (
         <div>
-            <p>Cart ID: {itemList?.id}</p>
-            <p>Product ID: {itemList?.product_id}</p>
-            <p>User ID: {itemList?.user_id}</p>
-            <p>Product Title: {itemList?.product_title}</p>
-            <img src={`${itemList?.product_image}`} />
-        </div >
+            {userCart.map(itemList => (
+                <CartItem itemList={itemList}/>
+            ))}
+        </div>
     )
 }
 

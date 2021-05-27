@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux';
 import { useParams } from "react-router-dom";
 import { displayProducts } from '../store/product';
 import CreateReview from "./CreateReview";
-import Review from "./Review.js"
+import Review from "./Review.js";
+import AddingToCart from "./AddingToCart.js";
+
 
 function SingleProduct() {
     const { productId } = useParams()
@@ -17,6 +19,7 @@ function SingleProduct() {
             <p>{product.lore}</p>
             <Review />
             <CreateReview />
+            <AddingToCart />
         </div>
     )
 }
