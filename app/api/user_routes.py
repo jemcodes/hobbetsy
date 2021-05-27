@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User, Cart, Product
+from app.models import db, User, Cart, Product
 from app.forms.cart_form import CartForm
 
 user_routes = Blueprint('users', __name__)
@@ -42,14 +42,14 @@ def add_to_cart(id, product_id):
     if form.validate_on_submit():
         print(f"ARE WE IN THE IF? ARE WE VALIDATING?")
         new_cart_item = Cart(
-            user_id = id,
-            product_id = product_id
+            user_id=id,
+            product_id=product_id
         )
         print(f"NEW_CART:{new_cart_item}")
         db.session.add(new_cart_item)
         db.session.commit()
-        # return new_cart_item.to_dict()
-        return new_cart_item
+        return new_cart_item.to_dict()
+        # return new_cart_item
     return "okie dokey"
 
 @user_routes.route('/<int:id>/cart/products/<int:product_id>', methods=['DELETE'])
