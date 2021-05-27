@@ -73,12 +73,12 @@ export const deleteReviewThunk = (deletePayload) => async (dispatch) => {
     // console.log(productId, reviewId)
     const response = await fetch(`/api/products/${productId}/reviews/${reviewId}`, {
         method: "DELETE",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
             reviewId
         })
     })
-    if(response.ok){
+    if (response.ok) {
         console.log("RESPONSE IS OKAY")
         dispatch(deleteReview(reviewId));
         // return response

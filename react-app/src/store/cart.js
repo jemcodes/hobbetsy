@@ -1,9 +1,17 @@
+import { useImperativeHandle } from "react";
+
 //action
 const GET_ITEMS = 'cart/GET_ITEMS';
+const ADD_ITEMS = 'cart/ADD_ITEMS';
 
 //action creator
 const getItems = list => ({
   type: GET_ITEMS,
+  list
+})
+
+const addItems = list => ({
+  type: ADD_ITEMS,
   list
 })
 
@@ -17,6 +25,21 @@ export const displayItems = (id) => async (dispatch) => {
   }
 }
 
+export const itemsAddedToCart = (list) => async (dispatch) => {
+  const { userId, productId } = list;
+  const response = await fetch(`/api/users/${userId}/cart/products/${productId}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(list)
+  })
+  if (response.ok) {
+    const data = await response.json();
+    dispatch(addItems(data))
+  }
+}
+
 const initialState = {
   list: [],
 };
@@ -27,9 +50,9 @@ const initialState = {
 
 //reducer
 export default function cartReducer(state = initialState, action) {
+  const nextState = {}
   switch (action.type) {
     case GET_ITEMS:
-      const nextState = {}
       action.list.carts.forEach(cart => {
         nextState[cart.id] = cart
       })
@@ -38,6 +61,12 @@ export default function cartReducer(state = initialState, action) {
         ...nextState,
         list: action.list.carts
       };
+    case ADD_ITEMS:
+      return {
+        ...state,
+        ...nextState,
+      }
+
     default:
       return state;
   }
