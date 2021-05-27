@@ -3,7 +3,8 @@ import { useImperativeHandle } from "react";
 //action
 const GET_ITEMS = 'cart/GET_ITEMS';
 const ADD_ITEMS = 'cart/ADD_ITEMS';
-const DELETE_ITEM = 'cart/DELETE_ITEM'
+const DELETE_ITEM = 'cart/DELETE_ITEM';
+const CHECKOUT = 'cart/CHECKOUT';
 
 //action creator
 const getItems = list => ({
@@ -18,6 +19,11 @@ const addItems = list => ({
 
 const deleteItem = payload => ({
   type: DELETE_ITEM,
+  payload
+})
+
+const checkOut = payload => ({
+  type: CHECKOUT,
   payload
 })
 
@@ -62,6 +68,22 @@ export const deleteItemsFromCart = (list) => async (dispatch) => {
 
 }
 
+export const checkOutCart = (list) => async (dispatch) => {
+  const { userId } = list;
+  const response = await fetch(`/api/users/${userId}/cart/}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(list)
+  })
+  if (response.ok) {
+    const data = await response;
+    dispatch(getItems(data))
+  }
+
+}
+
 const initialState = {
   list: [],
 };
@@ -95,6 +117,7 @@ export default function cartReducer(state = initialState, action) {
       delete nextState[action.payload]
       return nextState
 
+    
     default:
       return state;
   }

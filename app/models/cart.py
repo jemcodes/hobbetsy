@@ -19,5 +19,7 @@ class Cart(db.Model):
             "user_id": self.user_id,
             "product_id": self.product_id,
             "product_title": self.products.title,
-            "product_image": self.products.image
+            "product_image": self.products.image,
+            "product_price": self.products.price,
+            "product_quantity": self.products.quantity
         }

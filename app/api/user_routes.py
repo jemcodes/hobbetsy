@@ -64,4 +64,5 @@ def delete_from_cart(id, product_id, cart_id):
 @user_routes.route('/<int:id>/cart', methods=['DELETE'])
 # @login_required
 def delete_cart(id):
+    cart_to_delete = Cart.query.filter(Cart.user_id == id)
     return 'CART!!!'
