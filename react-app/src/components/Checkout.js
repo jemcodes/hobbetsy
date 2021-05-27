@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { deleteItemsFromCart } from "../store/cart"
+import { checkOutCart } from "../store/cart"
 
 
 export default function Checkout({ }) {
@@ -17,7 +17,7 @@ export default function Checkout({ }) {
             productId,
             userId
         }
-        // dispatch(itemsAddedToCart(payload))
+        dispatch(checkOutCart(payload))
     }
 
     return (

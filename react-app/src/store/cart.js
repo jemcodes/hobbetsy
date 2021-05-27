@@ -70,7 +70,7 @@ export const deleteItemsFromCart = (list) => async (dispatch) => {
 
 export const checkOutCart = (list) => async (dispatch) => {
   const { userId } = list;
-  const response = await fetch(`/api/users/${userId}/cart/}`, {
+  const response = await fetch(`/api/users/${userId}/cart`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -78,10 +78,9 @@ export const checkOutCart = (list) => async (dispatch) => {
     body: JSON.stringify(list)
   })
   if (response.ok) {
-    const data = await response;
+    const data = await response.json();
     dispatch(getItems(data))
   }
-
 }
 
 const initialState = {
@@ -97,9 +96,9 @@ export default function cartReducer(state = initialState, action) {
   let nextState = {}
   switch (action.type) {
     case GET_ITEMS:
-      action.list.carts.forEach(cart => {
-        nextState[cart.id] = cart
-      })
+        action.list.carts.forEach(cart => {
+          nextState[cart.id] = cart
+        })
       return {
         ...state,
         ...nextState,
@@ -116,8 +115,7 @@ export default function cartReducer(state = initialState, action) {
       nextState = { ...state }
       delete nextState[action.payload]
       return nextState
-
-    
+   
     default:
       return state;
   }
