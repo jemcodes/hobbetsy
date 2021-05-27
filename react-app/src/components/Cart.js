@@ -8,9 +8,9 @@ function Cart() {
     const dispatch = useDispatch();
     const userId = useSelector(state => state.session.user.id)
 
-    // useEffect(() => {
-    //     dispatch(displayItems(userId));
-    // }, [dispatch, userId])
+    useEffect(() => {
+        dispatch(displayItems(userId));
+    }, [dispatch, userId])
 
 
     const cartList = useSelector(state => {
