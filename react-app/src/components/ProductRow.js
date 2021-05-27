@@ -19,10 +19,10 @@ function ProductRow() {
         <div>
             <h1>PRODUCT ROW</h1>
             <ul>
-                <NavLink to={`/products/${product1.id}`}><li>{product1.title}</li></NavLink>
-                <NavLink to={`/products/${product2.id}`}><li>{product2.title}</li></NavLink>
-                <NavLink to={`/products/${product3.id}`}><li>{product3.title}</li></NavLink>
-                <NavLink to={`/products/${product4.id}`}><li>{product4.title}</li></NavLink>
+                <NavLink to={`/products/${product1?.id}`}><li>{product1?.title}</li></NavLink>
+                <NavLink to={`/products/${product2?.id}`}><li>{product2?.title}</li></NavLink>
+                <NavLink to={`/products/${product3?.id}`}><li>{product3?.title}</li></NavLink>
+                <NavLink to={`/products/${product4?.id}`}><li>{product4?.title}</li></NavLink>
                 <li>Patrick is a goober</li>
             </ul>
         </div>
