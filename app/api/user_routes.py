@@ -52,10 +52,13 @@ def add_to_cart(id, product_id):
         # return new_cart_item
     return "okie dokey"
 
-@user_routes.route('/<int:id>/cart/products/<int:product_id>', methods=['DELETE'])
-# @login_required
-def delete_from_cart(id, product_id):
-    return f'This is the {id} and the {product_id}!'
+@user_routes.route('/<int:id>/cart/<int:cart_id>/products/<int:product_id>', methods=['DELETE'])
+@login_required
+def delete_from_cart(id, product_id, cart_id):
+    cart_item_to_delete = Cart.query.get(cart_id)
+    db.session.delete(cart_item_to_delete)
+    db.session.commit()
+    return 'ok'
 
 
 @user_routes.route('/<int:id>/cart', methods=['DELETE'])

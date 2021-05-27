@@ -3,6 +3,7 @@ import { useImperativeHandle } from "react";
 //action
 const GET_ITEMS = 'cart/GET_ITEMS';
 const ADD_ITEMS = 'cart/ADD_ITEMS';
+const DELETE_ITEM = 'cart/DELETE_ITEM'
 
 //action creator
 const getItems = list => ({
@@ -13,6 +14,11 @@ const getItems = list => ({
 const addItems = list => ({
   type: ADD_ITEMS,
   list
+})
+
+const deleteItem = payload => ({
+  type: DELETE_ITEM,
+  payload
 })
 
 //thunk
@@ -40,6 +46,22 @@ export const itemsAddedToCart = (list) => async (dispatch) => {
   }
 }
 
+export const deleteItemsFromCart = (list) => async (dispatch) => {
+  const { userId, productId, cartId } = list;
+  const response = await fetch(`/api/users/${userId}/cart/${cartId}/products/${productId}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(list)
+  })
+  if (response.ok) {
+    const data = await response;
+    dispatch(deleteItem(cartId))
+  }
+
+}
+
 const initialState = {
   list: [],
 };
@@ -50,7 +72,7 @@ const initialState = {
 
 //reducer
 export default function cartReducer(state = initialState, action) {
-  const nextState = {}
+  let nextState = {}
   switch (action.type) {
     case GET_ITEMS:
       action.list.carts.forEach(cart => {
@@ -61,11 +83,17 @@ export default function cartReducer(state = initialState, action) {
         ...nextState,
         list: action.list.carts
       };
+
     case ADD_ITEMS:
       return {
         ...state,
         ...nextState,
       }
+
+    case DELETE_ITEM:
+      nextState = { ...state }
+      delete nextState[action.payload]
+      return nextState
 
     default:
       return state;
