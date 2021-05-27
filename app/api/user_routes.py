@@ -62,6 +62,9 @@ def delete_from_cart(id, product_id, cart_id):
 
 
 @user_routes.route('/<int:id>/cart', methods=['DELETE'])
-# @login_required
+@login_required
 def delete_cart(id):
-    return 'CART!!!'
+    cart_to_delete = Cart.query.filter(Cart.user_id == id).delete()
+    db.session.commit()
+    carts = Cart.query.filter(Cart.user_id == id).join(Product, Product.id == Cart.product_id).all()
+    return {"carts": [cart.to_dict() for cart in carts]}

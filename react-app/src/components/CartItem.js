@@ -27,6 +27,7 @@ export default function CartItem({ itemList }){
             <p>Product ID: {itemList?.product_id}</p>
             <p>User ID: {itemList?.user_id}</p>
             <p>Product Title: {itemList?.product_title}</p>
+            <p>Product Price: ${itemList?.product_price}</p>
             <img src={`${itemList?.product_image}`} />
             <button onClick={removeItemButton}>Remove Item</button>
         </div >

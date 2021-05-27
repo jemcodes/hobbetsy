@@ -32,13 +32,13 @@ function App() {
     })();
   }, []);
 
-  useEffect(() => {
-    (async () => {
-      if (user) {
-        await dispatch(displayItems(user.id));
-      }
-    })();
-  }, [dispatch, user]);
+  // useEffect(() => {
+  //   (async () => {
+  //     if (user) {
+  //       await dispatch(displayItems(user.id));
+  //     }
+  //   })();
+  // }, [dispatch, user]);
 
   if (!loaded) {
     return null;

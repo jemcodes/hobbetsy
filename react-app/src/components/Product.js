@@ -14,13 +14,9 @@ function Product() {
         return state.products.list.map(productId => state.products[productId])
     });
 
-
-    console.log('component', productList)
-
-
-    // useEffect(() => {
-    //     dispatch(displayProducts());
-    // }, [dispatch])
+    useEffect(() => {
+        dispatch(displayProducts());
+    }, [dispatch]);
 
     return (
         <div>

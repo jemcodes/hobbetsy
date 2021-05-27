@@ -2,15 +2,16 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { displayItems } from '../store/cart';
-import CartItem from './CartItem'
+import CartItem from './CartItem';
+import Checkout from './Checkout';
 
 function Cart() {
     const dispatch = useDispatch();
     const userId = useSelector(state => state.session.user.id)
 
-    // useEffect(() => {
-    //     dispatch(displayItems(userId));
-    // }, [dispatch, userId])
+    useEffect(() => {
+        dispatch(displayItems(userId));
+    }, [dispatch, userId])
 
 
     const cartList = useSelector(state => {
@@ -31,12 +32,16 @@ function Cart() {
     // }) => dispatch()
 
 
+    let total = 0
 
     return (
         <div>
             {userCart.map(itemList => (
+                total += itemList.product_price,
                 <CartItem itemList={itemList}/>
             ))}
+            <h3>TOTAL PRICE: ${total}</h3>
+            <Checkout />
         </div>
     )
 }
