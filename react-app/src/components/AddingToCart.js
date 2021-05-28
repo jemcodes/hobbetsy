@@ -24,7 +24,7 @@ export default function AddingToCart() {
   return (
     <>
       <form onSubmit={addToCartButton}>
-        <button type="submit">Add To Cart</button>
+        <button id="add-to-cart-btn" type="submit">Add To Cart</button>
       </form>
     </>
   )
