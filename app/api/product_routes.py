@@ -4,10 +4,9 @@ from flask_login import login_required, current_user
 from app.models import db, Product, Review, User
 
 product_routes = Blueprint('products', __name__)
-
+# @login_required
 
 @product_routes.route('/')
-@login_required
 def products():
     products = Product.query.all()
     return {"products": [product.to_dict() for product in products]}
@@ -24,7 +23,6 @@ def products():
 
 
 @product_routes.route('/<int:id>/reviews')
-@login_required
 def product_reviews(id):
     reviews = Review.query.filter(Review.product_id == id).join(
         User, User.id == Review.user_id).all()
