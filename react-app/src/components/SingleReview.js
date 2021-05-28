@@ -25,10 +25,53 @@ function SingleReview({ review, productId }) {
         dispatch(deleteReviewThunk(payload))
     }
 
+    const renderRating = (review) => {
+        if (review?.rating === 5) {
+            review.ratingImages =
+                <div>
+                    <p>⭐️</p>
+                    <p>⭐️</p>
+                    <p>⭐️</p>
+                    <p>⭐️</p>
+                    <p>⭐️</p>
+                </div>
+        } else if (review?.rating === 4) {
+            review.ratingImages =
+                <div>
+                    <p>⭐️</p>
+                    <p>⭐️</p>
+                    <p>⭐️</p>
+                    <p>⭐️</p>
+                </div>
+        } else if (review?.rating === 3) {
+            review.ratingImages =
+                <div>
+                    <p>⭐️</p>
+                    <p>⭐️</p>
+                    <p>⭐️</p>
+                </div>
+        } else if (review?.rating === 2) {
+            review.ratingImages =
+                <div>
+                    <p>⭐️</p>
+                    <p>⭐️</p>
+                </div>
+        } else if (review?.rating === 1) {
+            review.ratingImages =
+                <div>
+                    <p>⭐️</p>
+                </div>
+        }
+
+        return (
+            <h2 className="review-list-rating-contents">{review?.ratingImages}</h2>
+        )
+    }
+
     return (
         <div id="single-review-contents" key={review?.id}>
             <div id="single-review-user">{review?.user}</div>
-            <div id="single-review-rating">{review?.rating}</div>
+            <div id="single-review-rating">{renderRating(review)}</div>
             <div id="single-review">{review?.review}</div>
             <div id="single-review-btns">
                 {user.id === review?.user_id && <button class="review-edit-btn" id={review?.id} onClick={editButton}>Edit</button>}
