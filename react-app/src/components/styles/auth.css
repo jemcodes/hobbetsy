@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Open+Sans&display&family=Almendra&display=swap');
+/* font-family: 'Almendra', serif;
+font-family: 'Almendra Display', cursive;
+font-family: 'Open Sans', sans-serif; */
+
+.body{
+  background-color: #fdfaf6;
+}
+
 .form-image-container{
   position: relative;
-  width: 100%;
+  width: fit-content;
 }
 
 .door-image-container{
-position: absolute;
-}
-
-.shire-image-container{
-  position: absolute;
+ position: absolute;
+ width: 50%;
+ float: right;
 }
 
 .door-image-container.door-open img{
@@ -16,6 +23,25 @@ position: absolute;
   transition: 1s;
 }
 
+.shire-image-container{
+  position: absolute;
+  width: 50%;
+  float: right;
+}
+
 .form-container{
   position: absolute;
+  width: 50%;
+  float:left;
+  font-family: 'Almendra', cursive;
+  font-size: 15px;
+}
+
+.form-container>::placeholder{
+  font-family: 'Almendra', cursive;
+  font-size: 15px;
+}
+
+::placeholder{
+  font-family: 'Almendra', cursive
 }

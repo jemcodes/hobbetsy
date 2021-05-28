@@ -59,7 +59,7 @@ const LoginForm = () => {
               <input
                 name="email"
                 type="text"
-                placeholder="Email"
+                placeholder="Enter Email"
                 value={email}
                 onChange={updateEmail}
               />
@@ -69,7 +69,7 @@ const LoginForm = () => {
               <input
                 name="password"
                 type="password"
-                placeholder="Password"
+                placeholder="Enter Password"
                 value={password}
                 onChange={updatePassword}
               />
