@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Open+Sans&display&family=Almendra&display=swap');
+/* font-family: 'Almendra', serif;
+font-family: 'Almendra Display', cursive;
+font-family: 'Open Sans', sans-serif; */
+
+body {
+    margin: 0px;
+}
+
+#feature-row-div {
+    width: 98%;
+    margin: auto;
+}
+
+#feature-row-div {
+    /* border: 3px solid red; */
+    display: flex;
+    padding-left: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.feature-row-div-inner {
+    /* width: 25%; */
+    /* margin: 0 40px; */
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid green;     */
+    transition: transform .25s ease-in;
+    border-radius: 3px;
+}
+
+#featured-items-h3 {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 0 0 3%;
+    margin: 0;
+    color: rgba(0,0,0,0.8)
+}
+
+.feature-row-div-inner:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 4px rgba(1, 101, 68, 0.5);
+}
+
+#feature-row-div a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.6rem;
+}
+
+#feature-row-div li{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.feature-row-div-inner h4{
+    font-family: 'Almendra', serif;
+    font-weight: normal;
+    margin: 10px;
+    color: rgba(0,0,0,0.8)
+}
+
+.feature-row-div-inner img{
+    width: 80%;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    max-width: 280px;
+}
+
+.feature-row-div-inner p{
+    font-size: 1.2rem;
+    margin: 5px;
+    color: rgba(0,0,0,0.8);
+    font-family: 'Almendra', serif;
+}
+#lore {
+    /* font-size: 0.9rem; */
+    font-weight: bold;
+    font-family: 'Almendra Display', cursive;
+}
+
+.feature-row-div-inner .guarani {
+    font-size: 1rem;
+}
+
+#feature-row-hr {
+    overflow: visible; /* For IE */
+    height: 30px;
+    width: 60%;
+    margin-top: 40px;
+    /* margin-bottom: 30px; */
+    border-style: solid;
+    border-color: rgba(0,0,0,0.6);
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+#feature-row-hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.6);
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}

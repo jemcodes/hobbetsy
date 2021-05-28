@@ -7,6 +7,7 @@ import SingleProduct from './SingleProduct';
 import ProductRow from './ProductRow';
 import ProductRowBottom from './ProductRowBottom';
 import FeatureRow from './FeatureRow';
+import './styles/product.css'
 
 function Product() {
     const dispatch = useDispatch();
@@ -20,9 +21,6 @@ function Product() {
 
     return (
         <div>
-            <h1>HOBBETSY</h1>
-            <h2>Products</h2>
-            {/* <Categories /> */}
             {<ProductRow />}
             {<FeatureRow />}
             {<ProductRowBottom />}
