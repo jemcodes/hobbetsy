@@ -17,11 +17,11 @@ function SingleProduct() {
             <div id="single-prod-info">
                 <div id="single-prod-img-block">
                     <img src={`${product.image}`} alt="" />
-                    <p>{product.lore}</p>
+                    <p id="single-prod-lore">{product.lore}</p>
                 </div>
                 <div id="single-prod-description-block">
                     <h3 id="single-prod-title">{product.title}</h3>
-                    <h4>${product.price}</h4>
+                    <h4 id="single-prod-price">${product.price}</h4>
                     <p>{product.description}</p>
                     <div id="single-prod-add-btn">
                         <AddingToCart />

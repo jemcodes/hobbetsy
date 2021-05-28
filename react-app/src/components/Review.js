@@ -27,10 +27,12 @@ function Review() {
 
     return (
         <div>
-            <h1>Reviews</h1>
-            {reviewList.map(review => (
-                <SingleReview review={review} productId={productId} />
-            ))}
+            <h2 id="single-prod-review-heading">Reviews</h2>
+            <div id="single-prod-review-contents">
+                {reviewList.map(review => (
+                    <SingleReview review={review} productId={productId} />
+                ))}
+            </div>
         </div>
     )
 }
