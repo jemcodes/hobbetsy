@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import EditReviewForm from './EditReviewForm';
 import { deleteReviewThunk } from '../store/review'
+import sword from '../images/sword.png';
 
 function SingleReview({ review, productId }) {
     const dispatch = useDispatch()
@@ -29,37 +30,37 @@ function SingleReview({ review, productId }) {
         if (review?.rating === 5) {
             review.ratingImages =
                 <div>
-                    <p>⭐️</p>
-                    <p>⭐️</p>
-                    <p>⭐️</p>
-                    <p>⭐️</p>
-                    <p>⭐️</p>
+                    <img src={sword} alt={`Small sword`}/>
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
                 </div>
         } else if (review?.rating === 4) {
             review.ratingImages =
                 <div>
-                    <p>⭐️</p>
-                    <p>⭐️</p>
-                    <p>⭐️</p>
-                    <p>⭐️</p>
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
                 </div>
         } else if (review?.rating === 3) {
             review.ratingImages =
                 <div>
-                    <p>⭐️</p>
-                    <p>⭐️</p>
-                    <p>⭐️</p>
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
                 </div>
         } else if (review?.rating === 2) {
             review.ratingImages =
                 <div>
-                    <p>⭐️</p>
-                    <p>⭐️</p>
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
                 </div>
         } else if (review?.rating === 1) {
             review.ratingImages =
                 <div>
-                    <p>⭐️</p>
+                    <img src={sword} alt={`Small sword`} />
                 </div>
         }
 
@@ -70,14 +71,17 @@ function SingleReview({ review, productId }) {
 
     return (
         <div id="single-review-contents" key={review?.id}>
-            <div id="single-review-user">{review?.user}</div>
-            <div id="single-review-rating">{renderRating(review)}</div>
+            <div id="review-user-rating">
+                <div id="single-review-user">{review?.user}</div>
+                <div id="single-review-rating">{renderRating(review)}</div>
+            </div>
             <div id="single-review">{review?.review}</div>
             <div id="single-review-btns">
                 {user.id === review?.user_id && <button class="review-edit-btn" id={review?.id} onClick={editButton}>Edit</button>}
                 {user.id === review?.user_id && <button id="review-delete-btn" onClick={deleteButton}>Delete</button>}
                 {editable && <EditReviewForm reviewId={review?.id} editable={editable} setEditable={setEditable} />}
             </div>
+            <hr id="single-review-hr"></hr>
         </div>
     )
 }

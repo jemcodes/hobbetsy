@@ -12,7 +12,7 @@ button {
     background-color: #016544;
     border: 2px solid #016544;
     margin: 0 auto;
-    width: 25vw;
+    width: 20vw;
     padding: 0.5rem;
     color: white;
     text-align: center;
@@ -23,7 +23,7 @@ button {
 }
 
 #single-prod-page {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -31,26 +31,27 @@ button {
 }
 
 #single-prod-info {
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
 #single-prod-img-block {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     margin: 2rem 1rem 1rem 2rem;
     display: flex;
     flex-direction: column;
     max-width: 70%;
     text-align: center;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
 #single-prod-description-block {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     position: relative;
-    margin: 2rem 2rem 1rem 1rem;
-    padding: 1rem;
+    margin: 2rem 3rem 1rem 1rem;
+    padding: 1rem 2rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,7 +66,7 @@ h3#single-prod-title {
     padding: 0;
 }
 
-h4#single-prod-price {
+p#single-prod-price {
     font-size: 2rem;
     font-family: 'Almendra', cursive;
     font-weight: bold;
@@ -76,7 +77,7 @@ h4#single-prod-price {
 #add-to-cart-btn {
     background-color: #016544;
     border: 2px solid #016544;
-    width: 25vw;
+    width: 20vw;
     padding: 0.5rem;
     color: white;
     font-size: 1em;
@@ -92,7 +93,7 @@ h4#single-prod-price {
 }
 
 #single-prod-review {
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -103,7 +104,7 @@ h4#single-prod-price {
 }
 
 #single-prod-review-list {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     margin: 1rem 1rem 2rem 2rem;
     padding: 0rem 1rem 1rem 1rem;
     display: flex;
@@ -124,22 +125,35 @@ h4#single-prod-price {
 #single-review-contents {
     display: flex;
     flex-direction: column;
+    margin: 1rem 0 0 0;
+    border-bottom: 2px solid rgba(178, 208, 198, 0.4);
+}
+
+#review-user-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #single-review-user {
-    border: 2px solid green;
-    padding: 0.5rem 0 0.5rem 0.5rem;
+    /* border: 2px solid green; */
+    padding: 0.5rem;
+}
+
+div#single-review-rating {
+    padding: -1rem 0 -1rem 0.5rem;
+    margin: -1rem 0 -1rem 0.5rem;
 }
 
 #single-review-rating {
-    border: 2px solid orange;
-    padding: 0.5rem 0 0.5rem 0.5rem;
+    /* border: 2px solid orange; */
+    padding: -1rem 0 -1rem 0.5rem;
 }
 
-#single-review{
-    border: 2px solid blueviolet;
-    padding: 0.5rem 0 0.5rem 0.5rem;
-
+#single-review {
+    /* border: 2px solid purple; */
+    padding: 0.5rem 0 1rem 0.5rem;
 }
 
 .review-edit-btn {
@@ -155,7 +169,7 @@ h4#single-prod-price {
 }
 
 #single-prod-review-form {
-    border: 2px solid turquoise;
+    /* border: 2px solid turquoise; */
     position: relative;
     margin: 1rem -1rem 2rem 4rem;
     padding: 1rem;
@@ -169,7 +183,7 @@ h4#single-prod-price {
 }
 
 #change-rating {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     font-family: 'Almendra', cursive;
     font-size: 1.5rem;
     padding: 0 0 1rem 1rem;
@@ -200,7 +214,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #create-review {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     font-family: 'Almendra', cursive;
     font-size: 1.5rem;
     padding: 0 0 1rem 1rem;
@@ -230,11 +244,11 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: #016544;
     border: 2px solid #016544;
     margin: 0 auto;
-    width: 25vw;
+    width: 20vw;
     padding: 0.5rem;
     color: white;
     text-align: center;
-    font-size: 1em;
+    font-size: .8em;
     font-weight: bolder;
     border-radius: 40px;
     font-family: 'Open Sans', sans-serif;

@@ -21,7 +21,7 @@ function SingleProduct() {
                 </div>
                 <div id="single-prod-description-block">
                     <h3 id="single-prod-title">{product.title}</h3>
-                    <h4 id="single-prod-price">${product.price}</h4>
+                    <p id="single-prod-price">₲ {product.price}</p>
                     <p>{product.description}</p>
                     <div id="single-prod-add-btn">
                         <AddingToCart />
