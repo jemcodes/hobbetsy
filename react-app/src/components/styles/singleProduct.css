@@ -1,0 +1,76 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Open+Sans&display&family=Almendra&display=swap');
+font-family: 'Almendra', serif;
+font-family: 'Almendra Display', cursive;
+font-family: 'Open Sans', sans-serif; */
+
+
+body {
+    background-color: fdfaf6;
+}
+
+#single-prod-page {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#single-prod-info {
+    border: 2px solid orange;
+    display: flex;
+    flex-direction: row;
+}
+
+#single-prod-img-block {
+    border: 2px solid blue;
+    margin: 2rem 1rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    text-align: center;
+}
+
+#single-prod-description-block {
+    border: 2px solid green;
+    position: relative;
+    margin: 2rem 2rem 2rem 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#single-prod-title {
+    font-size: 2em;
+}
+
+#single-prod-review {
+    border: 2px solid pink;
+    display: flex;
+    flex-direction: row;
+}
+
+#single-prod-review-list {
+    border: 2px solid purple;
+    margin: 2rem 1rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 70%;
+    text-align: left;
+}
+
+#single-prod-review-form {
+    border: 2px solid turquoise;
+    position: relative;
+    margin: 2rem 2rem 2rem 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}

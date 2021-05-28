@@ -5,6 +5,7 @@ import { displayProducts } from '../store/product';
 import CreateReview from "./CreateReview";
 import Review from "./Review.js";
 import AddingToCart from "./AddingToCart.js";
+import './styles/singleProduct.css';
 
 
 function SingleProduct() {
@@ -12,14 +13,29 @@ function SingleProduct() {
     const product = useSelector(state => state.products[productId])
 
     return (
-        <div>
-            <h3>{product.title}</h3>
-            <p>{product.description}</p>
-            <img src={`${product.image}`} alt="" />
-            <p>{product.lore}</p>
-            <Review />
-            <CreateReview />
-            <AddingToCart />
+        <div id="single-prod-page">
+            <div id="single-prod-info">
+                <div id="single-prod-img-block">
+                    <img src={`${product.image}`} alt="" />
+                    <p>{product.lore}</p>
+                </div>
+                <div id="single-prod-description-block">
+                    <h3 id="single-prod-title">{product.title}</h3>
+                    <h4>${product.price}</h4>
+                    <p>{product.description}</p>
+                    <div id="single-prod-add-btn">
+                        <AddingToCart />
+                    </div>
+                </div>
+            </div>
+            <div id="single-prod-review">
+                <div id="single-prod-review-list">
+                    <Review />
+                </div>
+                <div id="single-prod-review-form">
+                    <CreateReview />
+                </div>
+            </div>
         </div>
     )
 }
