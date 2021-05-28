@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { displayItems } from '../store/cart';
 import CartItem from './CartItem';
 import Checkout from './Checkout';
+import './styles/cart.css';
 
 function Cart() {
     const dispatch = useDispatch();
@@ -36,12 +37,27 @@ function Cart() {
 
     return (
         <div>
-            {userCart.map(itemList => (
-                total += itemList.product_price,
-                <CartItem itemList={itemList}/>
-            ))}
-            <h3>TOTAL PRICE: ${total}</h3>
-            <Checkout />
+            <div className="cart-top-container">
+                <div className="checkout-button-container">
+                    <Checkout />
+                </div>
+            </div>
+            <div className="cart-items-container">
+                {userCart.map(itemList => (
+                    total += itemList.product_price,
+                    <div className="cart-item-container">
+                        <CartItem itemList={itemList}/>
+                    </div>
+                    ))}
+            </div>
+            <div className="cart-bottom-container">
+                <div className="checkout-button-container">
+                    <Checkout />
+                    </div>
+                    <div className="checkout-price-container">
+                    <h3 id="checkout-price">TOTAL PRICE: ${total}</h3>
+                </div>
+            </div>
         </div>
     )
 }

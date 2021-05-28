@@ -1,0 +1,30 @@
+.cart-top-container{
+    border: 3px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.checkout-button-container{
+    border: 3px solid blue;
+}
+
+.checkout-price-container{
+    border: 3px solid green;
+}
+
+.cart-items-container{
+    border: 3px solid orange
+}
+
+.cart-item-container{
+    border: 3px solid purple
+}
+
+.cart-bottom-container{
+    border: 3px solid yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
