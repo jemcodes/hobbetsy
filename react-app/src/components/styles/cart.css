@@ -25,6 +25,11 @@ font-weight: bolder;
 color: #016544;
 }
 
+.cart-account-standing{
+    font-family: 'Almendra', serif;
+    font-size: 25px;
+}
+
 .checkout-button-container{
     /* border: 3px solid blue; */
 }
@@ -38,14 +43,13 @@ color: #016544;
     margin-left: 7px;
     margin-right: 7px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .cart-item-container{
     /* border: 3px solid purple; */
-    background-color: rgba(1, 101, 68, .50);
     max-width: 49%;
     width: 49%;
 }
@@ -68,7 +72,7 @@ color: #016544;
     margin-top: 50px;
     margin-bottom: 30px;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(1, 101, 68);
     border-width: 1px 0 0 0;
     border-radius: 20px;
 }
@@ -78,7 +82,7 @@ color: #016544;
     height: 30px;
     margin-top: -31px;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(1, 101, 68);
     border-width: 0 0 1px 0;
     border-radius: 20px;
 }
