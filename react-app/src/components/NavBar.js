@@ -4,7 +4,7 @@ import LogoutButton from './auth/LogoutButton';
 import Search from './Search';
 import Cart from './Cart';
 import DemoUser from './auth/DemoUser';
-import cart from '../images/cart.png';
+import cart from '../images/yeoldecart.png';
 import "./styles/navBar.css"
 import logo from '../images/hobbetsylogoNB.png';
 
