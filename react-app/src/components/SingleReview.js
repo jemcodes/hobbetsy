@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import EditReviewForm from './EditReviewForm';
 import { deleteReviewThunk } from '../store/review'
+import sword from '../images/sword.png';
 
 function SingleReview({ review, productId }) {
     const dispatch = useDispatch()
@@ -25,14 +26,62 @@ function SingleReview({ review, productId }) {
         dispatch(deleteReviewThunk(payload))
     }
 
+    const renderRating = (review) => {
+        if (review?.rating === 5) {
+            review.ratingImages =
+                <div>
+                    <img src={sword} alt={`Small sword`}/>
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                </div>
+        } else if (review?.rating === 4) {
+            review.ratingImages =
+                <div>
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                </div>
+        } else if (review?.rating === 3) {
+            review.ratingImages =
+                <div>
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                </div>
+        } else if (review?.rating === 2) {
+            review.ratingImages =
+                <div>
+                    <img src={sword} alt={`Small sword`} />
+                    <img src={sword} alt={`Small sword`} />
+                </div>
+        } else if (review?.rating === 1) {
+            review.ratingImages =
+                <div>
+                    <img src={sword} alt={`Small sword`} />
+                </div>
+        }
+
+        return (
+            <h2 className="review-list-rating-contents">{review?.ratingImages}</h2>
+        )
+    }
+
     return (
-        <div key={review?.id}>
-            <div>{review?.user}</div>
-            <div>{review?.rating}</div>
-            <div>{review?.review}</div>
-            {user.id === review?.user_id && <button id={review?.id} onClick={editButton}>Edit</button>}
-            {user.id === review?.user_id && <button onClick={deleteButton}>Delete</button>}
-            {editable && <EditReviewForm reviewId={review?.id} editable={editable} setEditable={setEditable} />}
+        <div id="single-review-contents" key={review?.id}>
+            <div id="review-user-rating">
+                <div id="single-review-user">{review?.user}</div>
+                <div id="single-review-rating">{renderRating(review)}</div>
+            </div>
+            <div id="single-review">{review?.review}</div>
+            <div id="single-review-btns">
+                {user.id === review?.user_id && <button class="review-edit-btn" id={review?.id} onClick={editButton}>Edit</button>}
+                {user.id === review?.user_id && <button id="review-delete-btn" onClick={deleteButton}>Delete</button>}
+                {editable && <EditReviewForm reviewId={review?.id} editable={editable} setEditable={setEditable} />}
+            </div>
+            <hr id="single-review-hr"></hr>
         </div>
     )
 }

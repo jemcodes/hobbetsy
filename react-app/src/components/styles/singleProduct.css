@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Open+Sans&display&family=Almendra&display=swap');
+/* font-family: 'Almendra', serif;
+font-family: 'Almendra Display', cursive;
+font-family: 'Open Sans', sans-serif; */
+
+
+body {
+    background-color: fdfaf6;
+}
+
+button {
+    background-color: #016544;
+    border: 2px solid #016544;
+    margin: 0 auto;
+    width: 20vw;
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    border-radius: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#single-prod-page {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#single-prod-info {
+    /* border: 2px solid orange; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#single-prod-img-block {
+    /* border: 2px solid blue; */
+    margin: 2rem 1rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    text-align: center;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+#single-prod-description-block {
+    /* border: 2px solid green; */
+    position: relative;
+    margin: 2rem 3rem 1rem 1rem;
+    padding: 1rem 2rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3#single-prod-title {
+    font-size: 2em;
+    font-family: 'Almendra Display', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+p#single-prod-price {
+    font-size: 2rem;
+    font-family: 'Almendra', cursive;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+#add-to-cart-btn {
+    background-color: #016544;
+    border: 2px solid #016544;
+    width: 20vw;
+    padding: 0.5rem;
+    color: white;
+    font-size: 1em;
+    font-weight: bolder;
+    border-radius: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#single-prod-lore {
+    color: #016544;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#single-prod-review {
+    /* border: 2px solid pink; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#single-prod-review-heading {
+    font-family: 'Almendra', serif;
+}
+
+#single-prod-review-list {
+    /* border: 2px solid purple; */
+    margin: 1rem 1rem 2rem 2rem;
+    padding: 0rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 50%;
+    max-width: 70%;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#single-prod-review-contents {
+    display: flex;
+    flex-direction: column;
+}
+
+#single-review-contents {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 0 0;
+    border-bottom: 2px solid rgba(178, 208, 198, 0.4);
+}
+
+#review-user-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#single-review-user {
+    /* border: 2px solid green; */
+    padding: 0.5rem;
+}
+
+div#single-review-rating {
+    padding: -1rem 0 -1rem 0.5rem;
+    margin: -1rem 0 -1rem 0.5rem;
+}
+
+#single-review-rating {
+    /* border: 2px solid orange; */
+    padding: -1rem 0 -1rem 0.5rem;
+}
+
+#single-review {
+    /* border: 2px solid purple; */
+    padding: 0.5rem 0 1rem 0.5rem;
+}
+
+.review-edit-btn {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    width: 8vw;
+    font-size: .8em;
+}
+
+#review-delete-btn {
+    margin: 0.5rem 0 0.5rem 0;
+    width: 8vw;
+    font-size: .8em;
+}
+
+#single-prod-review-form {
+    /* border: 2px solid turquoise; */
+    position: relative;
+    margin: 1rem -1rem 2rem 4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    min-width: 30%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#change-rating {
+    /* border: 2px solid red; */
+    font-family: 'Almendra', cursive;
+    font-size: 1.5rem;
+    padding: 0 0 1rem 1rem;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    opacity: 0.6;
+}
+
+#rating-input {
+    margin: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    width: 5vw;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+#rating-input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+#create-review {
+    /* border: 2px solid red; */
+    font-family: 'Almendra', cursive;
+    font-size: 1.5rem;
+    padding: 0 0 1rem 1rem;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#review-input {
+    margin: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    border-radius: 5px;
+    border: 1px groove rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+    width: 27vw;
+    height: 20vh;
+}
+
+#review-input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+#create-review-btn {
+    background-color: #016544;
+    border: 2px solid #016544;
+    margin: 0 auto;
+    width: 20vw;
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+    font-size: .8em;
+    font-weight: bolder;
+    border-radius: 40px;
+    font-family: 'Open Sans', sans-serif;
+}

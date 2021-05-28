@@ -39,28 +39,32 @@ function CreateReview() {
 
     return (
         <form onSubmit={onReviewSubmit}>
-            <div>
-                <label>Rating</label>
-                <input
-                    type="number"
-                    min="1"
-                    max="5"
-                    step="1"
-                    name="rating"
-                    onChange={updateRating}
-                    value={rating}
-                ></input>
+            <div id="create-review-form">
+                <div id="change-rating">
+                    <label>Rating</label>
+                    <input id="rating-input"
+                        type="number"
+                        min="1"
+                        max="5"
+                        step="1"
+                        name="rating"
+                        onChange={updateRating}
+                        value={rating}
+                    ></input>
+                </div>
             </div>
             <div>
-                <label>Review</label>
-                <textarea
+                <div id="create-review">
+                    <label>Review</label>
+                    <textarea id="review-input"
 
-                    name="review"
-                    onChange={updateReview}
-                    value={review}
-                />
+                        name="review"
+                        onChange={updateReview}
+                        value={review}
+                    />
+                <button id="create-review-btn" type="submit">Submit Review</button>
+                </div>
             </div>
-            <button type="submit">Submit Review</button>
         </form>
     )
 }
