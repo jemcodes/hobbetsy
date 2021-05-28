@@ -1,0 +1,21 @@
+.form-image-container{
+  position: relative;
+  width: 100%;
+}
+
+.door-image-container{
+position: absolute;
+}
+
+.shire-image-container{
+  position: absolute;
+}
+
+.door-image-container.door-open img{
+  transform: rotateY(-180deg);
+  transition: 1s;
+}
+
+.form-container{
+  position: absolute;
+}
