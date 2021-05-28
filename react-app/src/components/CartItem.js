@@ -39,7 +39,7 @@ export default function CartItem({ itemList }){
                         <p>₲ {itemList?.product_price}</p>
                     </div>
                     <div className="citem-removebutton-container">
-                        <button onClick={removeItemButton}>Remove Item</button>
+                        <button className="citem-removebutton" onClick={removeItemButton}>Remove Item</button>
                     </div>
                 </div>
             </div >

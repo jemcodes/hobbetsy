@@ -5,46 +5,29 @@ import Search from './Search';
 import Cart from './Cart';
 import DemoUser from './auth/DemoUser';
 import cart from '../images/cart.png';
+import "./styles/navBar.css"
+import logo from '../images/hobbetsylogoNB.png';
+
 
 const NavBar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
+    <nav className="navContainer">
+        <div>
           <NavLink to="/" exact={true} activeClassName="active">
-            <button>Home</button>
+            <img className="main-logo" src={logo} />
           </NavLink>
-        </li>
-        <li>
-          <NavLink to="/login" exact={true} activeClassName="active">
-            <button>Login</button>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/sign-up" exact={true} activeClassName="active">
-            <button>Sign Up </button>
-          </NavLink>
-        </li>
-        <li>
-          <DemoUser />
-        </li>
-        {/* <li>
-          <NavLink to="/users" exact={true} activeClassName="active">
-            Users
-          </NavLink>
-        </li> */}
-        <li>
+        </div>
+        <div>
           <Search />
-        </li>
-        <li>
+        </div>
+        <div>
           <NavLink to="/cart" exact={true} activeClassName="active">
-            <img src={cart} width="50px" />
+            <img src={cart} className="cartButton"/>
           </NavLink>
-        </li>
-        <li>
+        </div>
+        <div>
           <LogoutButton />
-        </li>
-      </ul>
+        </div>
     </nav>
   );
 }

@@ -45,3 +45,14 @@ font-family: 'Open Sans', sans-serif; */
 ::placeholder{
   font-family: 'Almendra', cursive
 }
+
+.auth-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav-items button{
+  width: 8vw;
+  margin: 1rem;
+}

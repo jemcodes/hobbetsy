@@ -43,6 +43,7 @@ function Cart() {
                 <div className="cart-username-container">
                     <p className="cart-username">{user.username}'s Cart</p>
                 </div>
+                <p className="cart-account-standing">Your account's tab is in good standing with the shopkeep.</p>
                 <div className="checkout-button-container">
                     <Checkout />
                 </div>
