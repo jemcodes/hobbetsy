@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Open+Sans&display&family=Almendra&display=swap');
+/* font-family: 'Almendra', serif;
+font-family: 'Almendra Display', cursive;
+font-family: 'Open Sans', sans-serif; */
+
+.cart-top-container{
+    /* border: 3px solid red; */
+    /* max-width: 75%; */
+    margin-left: 7px;
+    margin-right: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-username-container{
+    /* border: 3px solid pink; */
+}
+
+.cart-username{
+font-family: 'Almendra', serif;
+font-size: 40px;    
+font-weight: bolder;
+color: #016544;
+}
+
+.checkout-button-container{
+    /* border: 3px solid blue; */
+}
+
+.checkout-price-container{
+    /* border: 3px solid green; */
+}
+
+.cart-items-container{
+    /* border: 3px solid orange; */
+    margin-left: 7px;
+    margin-right: 7px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cart-item-container{
+    /* border: 3px solid purple; */
+    background-color: rgba(1, 101, 68, .50);
+    max-width: 49%;
+    width: 49%;
+}
+
+.cart-bottom-container{
+    /* border: 3px solid yellow; */
+    margin-left: 7px;
+    margin-right: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HR STYLING */
+.cart-item-separator {
+    overflow: visible; /* For IE */
+    height: 30px;
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+.cart-item-separator:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}

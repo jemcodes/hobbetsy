@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { deleteItemsFromCart } from "../store/cart"
+import './styles/cartItems.css';
 
 
 export default function CartItem({ itemList }){
@@ -23,13 +24,25 @@ export default function CartItem({ itemList }){
 
     return (
         <div>
-            <p>Cart ID: {itemList?.id}</p>
-            <p>Product ID: {itemList?.product_id}</p>
-            <p>User ID: {itemList?.user_id}</p>
-            <p>Product Title: {itemList?.product_title}</p>
-            <p>Product Price: ${itemList?.product_price}</p>
-            <img src={`${itemList?.product_image}`} />
-            <button onClick={removeItemButton}>Remove Item</button>
-        </div >
+            <div className="citem-container">
+                {/* <p>Cart ID: {itemList?.id}</p> */}
+                {/* <p>Product ID: {itemList?.product_id}</p> */}
+                {/* <p>User ID: {itemList?.user_id}</p> */}
+                <div className="citem-pic-container">
+                    <img className="citem-pic" src={`${itemList?.product_image}`} />
+                </div>
+                <div className="citem-info-container">
+                    <div className="citem-title-container">
+                        <p>{itemList?.product_title}</p>
+                    </div>
+                    <div className="citem-price-container">
+                        <p>₲ {itemList?.product_price}</p>
+                    </div>
+                    <div className="citem-removebutton-container">
+                        <button onClick={removeItemButton}>Remove Item</button>
+                    </div>
+                </div>
+            </div >
+        </div>
     )
 }

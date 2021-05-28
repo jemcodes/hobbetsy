@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { displayItems } from '../store/cart';
 import CartItem from './CartItem';
 import Checkout from './Checkout';
+import './styles/cart.css';
 
 function Cart() {
     const dispatch = useDispatch();
@@ -23,7 +24,9 @@ function Cart() {
         return item?.user_id === userId
     })
 
-    console.log("THIS IS THE USER CART DONT MISS IT JAMIE", userCart)
+    const user = useSelector(state => state.session.user)
+
+    // console.log("THIS IS THE USER CART DONT MISS IT JAMIE", userCart)
     // console.log("ITEM LIST:", itemList)
     // const allCartItems = ({
     //     user_id,
@@ -36,12 +39,34 @@ function Cart() {
 
     return (
         <div>
-            {userCart.map(itemList => (
-                total += itemList.product_price,
-                <CartItem itemList={itemList}/>
-            ))}
-            <h3>TOTAL PRICE: ${total}</h3>
-            <Checkout />
+            <div className="cart-top-container">
+                <div className="cart-username-container">
+                    <p className="cart-username">{user.username}'s Cart</p>
+                </div>
+                <div className="checkout-button-container">
+                    <Checkout />
+                </div>
+            </div>
+            <hr className="cart-item-separator" />
+            <div className="cart-items-container">
+                {userCart.map(itemList => (
+                    total += itemList.product_price,
+                    <div className="cart-item-container">
+                        <CartItem itemList={itemList}/>
+                        <hr className="cart-item-separator" />
+                    </div>
+                    ))}
+            </div>
+            <hr className="cart-item-separator" />
+            <div className="cart-bottom-container">
+                <div className="checkout-price-container">
+                    <h3 id="checkout-price">TOTAL PRICE: ₲ {total}</h3>
+                </div>
+
+                <div className="checkout-button-container">
+                    <Checkout />
+                </div>
+            </div>
         </div>
     )
 }
