@@ -7,6 +7,7 @@ import SingleProduct from './SingleProduct';
 import ProductRow from './ProductRow';
 import ProductRowBottom from './ProductRowBottom';
 import FeatureRow from './FeatureRow';
+import NavBar from './NavBar';
 import './styles/product.css'
 
 function Product() {
@@ -21,6 +22,7 @@ function Product() {
 
     return (
         <div>
+            {<NavBar />}
             {<ProductRow />}
             {<FeatureRow />}
             {<ProductRowBottom />}

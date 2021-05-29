@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { displayItems } from '../store/cart';
 import CartItem from './CartItem';
 import Checkout from './Checkout';
+import NavBar from './NavBar';
 import './styles/cart.css';
 
 function Cart() {
@@ -39,6 +40,7 @@ function Cart() {
 
     return (
         <div>
+            <NavBar />
             <div className="cart-top-container">
                 <div className="cart-username-container">
                     <p className="cart-username">{user.username}'s Cart</p>

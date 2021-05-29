@@ -5,6 +5,7 @@ import { displayProducts } from '../store/product';
 import CreateReview from "./CreateReview";
 import Review from "./Review.js";
 import AddingToCart from "./AddingToCart.js";
+import NavBar from './NavBar';
 import './styles/singleProduct.css';
 
 
@@ -14,6 +15,7 @@ function SingleProduct() {
 
     return (
         <div id="single-prod-page">
+            <NavBar />
             <div id="single-prod-info">
                 <div id="single-prod-img-block">
                     <img src={`${product.image}`} alt="" />
