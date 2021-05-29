@@ -12,22 +12,24 @@ import logo from '../images/hobbetsylogoNB.png';
 const NavBar = () => {
   return (
     <nav className="navContainer">
-        <div>
-          <NavLink to="/" exact={true} activeClassName="active">
-            <img className="main-logo" src={logo} />
-          </NavLink>
-        </div>
-        <div>
-          <Search />
-        </div>
+      <div>
+        <NavLink to="/" exact={true} activeClassName="active">
+          <img className="main-logo" src={logo} />
+        </NavLink>
+      </div>
+      <div id='outer-search-div'>
+        <Search />
+      </div>
+      <div id='nav-right-div'>
         <div>
           <NavLink to="/cart" exact={true} activeClassName="active">
-            <img src={cart} className="cartButton"/>
+            <img src={cart} className="cartButton" />
           </NavLink>
         </div>
         <div>
           <LogoutButton />
         </div>
+      </div>
     </nav>
   );
 }

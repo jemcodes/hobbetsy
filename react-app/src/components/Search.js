@@ -12,33 +12,39 @@ function Search() {
     })
 
     useEffect(() => {
-        setFilteredProducts(products.filter( product => {
+        setFilteredProducts(products.filter(product => {
             return product.title.toLowerCase().includes(search.toLowerCase())
         })
         )
     }, [search])
-    console.log("FILTERED", filteredProducts)
     return (
         <>
             <div className="search-div">
-                <input type="text" placeholder="Search by name" onChange={(e) => setSearch(e.target.value)} className='product-search' />
+                <input value={search} type="text" placeholder="Search products by name..." onChange={(e) => setSearch(e.target.value)} className='product-search' />
             </div>
-            <div>
+            {filteredProducts.length < 29 && filteredProducts.length > 0 && <div id='search-results-div'>
                 {search.length >= 1 && filteredProducts.map(product => (
-                    <SingleSearchItem product={product}/>
+                    <SingleSearchItem product={product} setSearch={setSearch} filteredProducts={filteredProducts} key={product.id} />
                 ))}
-            </div>
+            </div>}
+
+            {filteredProducts.length === 0 && <div id='search-results-div'>
+                <p id='no-results'>Out of stock...</p>
+            </div>}
+            {/* COMMENTED CODE BELOW IS WORKING AND IS A BACKUP VERSION */}
+            {/* {filteredProducts.length ?
+                <div id='search-results-div'>
+                    {search.length >= 1 && filteredProducts.map(product => (
+                        <SingleSearchItem product={product} setSearch={setSearch} filteredProducts={filteredProducts} />
+                    ))}
+                </div>
+                :
+                <div id='search-results-div'>
+                    <p id='no-results'>Out of stock...</p>
+                </div>} */}
+
         </>
     )
 }
-// export default Search;
-//     // console.log(products)
-    
-//     return (
-//         <div>
-//             <input placeholder='Search here!'/>
-//         </div>
-//     )
-// }
 
 export default Search;
