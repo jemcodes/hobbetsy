@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { signUp } from '../../store/session';
 import bilbos_green_door from "../../images/bag_end_door.png";
 import the_shire from "../../images/shire.png";
+import AuthNavBar from './AuthNavBar';
 import '../styles/auth.css';
 
 const SignUpForm = () => {
@@ -47,7 +48,8 @@ const SignUpForm = () => {
   }
 
   return (
-    <>
+    <div className="auth-black-back">
+      <AuthNavBar />
       <h1 id="hobbetsy-title">Hobbetsy</h1>
       <div className="form-image-container">
         <div className="shire-image-container">
@@ -107,7 +109,7 @@ const SignUpForm = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

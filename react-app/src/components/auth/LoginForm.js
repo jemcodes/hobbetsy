@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { login } from "../../store/session";
 import bilbos_green_door from "../../images/bag_end_door.png";
 import the_shire from "../../images/shire.png";
+import AuthNavBar from './AuthNavBar';
 import '../styles/auth.css';
 
 const LoginForm = () => {
@@ -41,7 +42,8 @@ const LoginForm = () => {
   }
 
   return (
-    <>
+    <div className="auth-black-back">
+      <AuthNavBar />
       <h1 id="hobbetsy-title">Hobbetsy</h1>
       <div className="form-image-container">
         {/* TODO ZOOM <div className={`shire-image-container ${shireZoom ? "shire-zoom" : ""}`}> */}
@@ -84,7 +86,7 @@ const LoginForm = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
