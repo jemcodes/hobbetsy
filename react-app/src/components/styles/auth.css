@@ -8,14 +8,27 @@ font-family: 'Open Sans', sans-serif; */
 }
 
 .form-image-container{
+  border: 2px solid red;
+  display: flex;
+  width: 100%;
+  min-height: 1000px;
+  justify-content: center;
+  padding: 3rem 5rem 0 0;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image-container-auth{
   position: relative;
-  width: fit-content;
 }
 
 .door-image-container{
+  border: 2px solid green;
  position: absolute;
- width: 50%;
- float: right;
+ margin: 0 auto;
+ padding-right: 30vw;
+ /* width: 50%;
+ float: right; */
 }
 
 .door-image-container.door-open img{
@@ -24,17 +37,34 @@ font-family: 'Open Sans', sans-serif; */
 }
 
 .shire-image-container{
+  border: 2px solid blue;
   position: absolute;
-  width: 50%;
+  object-fit: cover;
+  padding-right: 30vw;
+}
+  /*
+  width: 100%;
+  height: auto;
   float: right;
+}*/
+
+.shire-image-container img{
+    width: 100%;
+}
+
+.door-image-container img{
+  width: 100%;
+}
+
+.image-sizing{
+  height: 1000px;
 }
 
 .form-container{
-  position: absolute;
+  /* position: absolute; */
   width: 50%;
-  float:left;
   font-family: 'Almendra', cursive;
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .form-container>::placeholder{

@@ -44,11 +44,13 @@ const SignUpForm = () => {
   return (
     <>
       <div className="form-image-container">
-        <div className="door-image-container">
-          <img src={bilbos_green_door} />
-        </div>
-        <div className="shire-image-container">
-          <img src={the_shire} />
+        <div className="image-container-auth">
+          <div className="door-image-container">
+            <img className="image-sizing" src={bilbos_green_door} />
+          </div>
+          <div className="shire-image-container">
+            <img className="image-sizing" src={the_shire} />
+          </div>
         </div>
         <div className="form-container">
           <form onSubmit={onSignUp}>
