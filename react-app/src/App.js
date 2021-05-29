@@ -15,9 +15,11 @@ import Cart from "./components/Cart"
 import CreateReview from "./components/CreateReview";
 import EditReview from "./components/EditReview";
 import Favorite from "./components/Favorite";
+import About from "./components/About"
 import { displayProducts } from './store/product';
 import { displayItems } from './store/cart'
 import { authenticate } from "./store/session";
+import Footer from "./components/Footer";
 
 function App() {
   const user = useSelector(state => state.session.user)
@@ -82,7 +84,11 @@ function App() {
         <ProtectedRoute path="/cart" exact={true} >
           <Cart />
         </ProtectedRoute>
+        <Route path="/about" exact={true}>
+          <About />
+        </Route>
       </Switch>
+        {<Footer />}
     </BrowserRouter>
   );
 }

@@ -1,0 +1,49 @@
+.about-main-container{
+    border: 3px solid red;
+    height: 80vh;
+}
+
+.about-biline-container{
+    /* border: 3px solid pink; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-biline{
+    max-width: 60%;
+}
+
+.about-devs-container{
+    /* border: 3px solid blue; */
+    background-color: rgba(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about-dev-card{
+    /* border: 3px solid green; */
+    max-width: 100%;
+}
+
+.about-dev-info-container{
+    /* border: 3px solid yellow; */
+    padding-left: 10px;
+    display: flex;
+    background-color: #FDFAF6;
+    flex-direction: column;
+}
+
+.about-dev-link-container{
+    /* border: 3px solid orange; */
+}
+
+.about-dev-project-links{
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
