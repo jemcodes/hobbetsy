@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
-import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { signUp } from '../../store/session';
 import bilbos_green_door from "../../images/bag_end_door.png";
 import the_shire from "../../images/shire.png";
+import AuthNavBar from './AuthNavBar';
 import '../styles/auth.css';
 
 const SignUpForm = () => {
@@ -13,6 +14,7 @@ const SignUpForm = () => {
   const [repeatPassword, setRepeatPassword] = useState("");
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const onSignUp = async (e) => {
     e.preventDefault();
@@ -37,26 +39,34 @@ const SignUpForm = () => {
     setRepeatPassword(e.target.value);
   };
 
+  let openDoor = false;
   if (user) {
-    return <Redirect to="/" />;
+    openDoor = true
+    setTimeout(() => {
+      history.push('/');
+    }, 3000)
   }
 
   return (
-    <>
+    <div className="auth-black-back">
+      <AuthNavBar />
+      <h1 id="hobbetsy-title">Hobbetsy</h1>
       <div className="form-image-container">
-        <div className="door-image-container">
-          <img src={bilbos_green_door} />
-        </div>
         <div className="shire-image-container">
           <img src={the_shire} />
+        </div>
+        <div className={`door-image-container ${openDoor ? "door-open" : ""}`}>
+          <img src={bilbos_green_door} />
         </div>
         <div className="form-container">
           <form onSubmit={onSignUp}>
             <div>
               <label>User Name</label>
               <input
+                className="login-form-input"
                 type="text"
                 name="username"
+                placeholder="Enter Username"
                 onChange={updateUsername}
                 value={username}
               ></input>
@@ -64,8 +74,10 @@ const SignUpForm = () => {
             <div>
               <label>Email</label>
               <input
+                className="login-form-input"
                 type="text"
                 name="email"
+                placeholder="Enter Email"
                 onChange={updateEmail}
                 value={email}
               ></input>
@@ -73,8 +85,10 @@ const SignUpForm = () => {
             <div>
               <label>Password</label>
               <input
+                className="login-form-input"
                 type="password"
                 name="password"
+                placeholder="Enter Password"
                 onChange={updatePassword}
                 value={password}
               ></input>
@@ -82,18 +96,20 @@ const SignUpForm = () => {
             <div>
               <label>Repeat Password</label>
               <input
+                className="login-form-input"
                 type="password"
                 name="repeat_password"
+                placeholder="Re-enter Password"
                 onChange={updateRepeatPassword}
                 value={repeatPassword}
                 required={true}
               ></input>
             </div>
-            <button type="submit">Sign Up</button>
+            <button className="login-submit-btn" type="submit">Sign Up</button>
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

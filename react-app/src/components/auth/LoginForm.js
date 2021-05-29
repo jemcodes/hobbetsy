@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { login } from "../../store/session";
 import bilbos_green_door from "../../images/bag_end_door.png";
 import the_shire from "../../images/shire.png";
+import AuthNavBar from './AuthNavBar';
 import '../styles/auth.css';
 
 const LoginForm = () => {
@@ -31,21 +32,26 @@ const LoginForm = () => {
   };
 
   let openDoor = false;
+  // TODO ZOOM let shireZoom = false;
   if (user) {
     openDoor = true
+    // TODO ZOOM shireZoom = true;
     setTimeout(() => {
       history.push('/');
-    }, 1000)
+    }, 3000)
   }
 
   return (
-    <>
+    <div className="auth-black-back">
+      <AuthNavBar />
+      <h1 id="hobbetsy-title">Hobbetsy</h1>
       <div className="form-image-container">
+        {/* TODO ZOOM <div className={`shire-image-container ${shireZoom ? "shire-zoom" : ""}`}> */}
         <div className="shire-image-container">
-          <img src={the_shire} width="414px" />
+          <img src={the_shire} />
         </div>
         <div className={`door-image-container ${openDoor ? "door-open" : ""}`}>
-          <img src={bilbos_green_door} width="414px" />
+          <img src={bilbos_green_door} />
         </div>
         <div className="form-container">
           <form onSubmit={onLogin}>
@@ -57,6 +63,7 @@ const LoginForm = () => {
             <div>
               <label htmlFor="email">Email</label>
               <input
+                className="login-form-input"
                 name="email"
                 type="text"
                 placeholder="Enter Email"
@@ -67,18 +74,19 @@ const LoginForm = () => {
             <div>
               <label htmlFor="password">Password</label>
               <input
+                className="login-form-input"
                 name="password"
                 type="password"
                 placeholder="Enter Password"
                 value={password}
                 onChange={updatePassword}
               />
-              <button type="submit">Login</button>
             </div>
+            <button className="login-submit-btn" type="submit">Login</button>
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -47,7 +47,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      {user?<NavBar/>:<AuthNavBar/>}
+      {/* <AuthNavBar/> */}
       <Switch>
         <Route path="/login" exact={true}>
           <LoginForm />

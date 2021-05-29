@@ -8,12 +8,12 @@ const AuthNavBar = () => {
     <nav className="auth-nav">
         <div className="nav-items">
           <NavLink to="/login" exact={true} activeClassName="active">
-            <button>Login</button>
+          <button id="auth-nav-btn">Login</button>
           </NavLink>
         </div>
         <div className="nav-items">
           <NavLink to="/sign-up" exact={true} activeClassName="active">
-            <button>Sign Up </button>
+          <button id="auth-nav-btn">Sign Up </button>
           </NavLink>
         </div>
         <div className="nav-items">

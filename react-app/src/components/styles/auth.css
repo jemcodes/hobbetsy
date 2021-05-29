@@ -3,38 +3,132 @@
 font-family: 'Almendra Display', cursive;
 font-family: 'Open Sans', sans-serif; */
 
-.body{
-  background-color: #fdfaf6;
+.auth-black-back {
+  background-color: black;
+  color: white;
+}
+
+
+
+#hobbetsy-title {
+  font-size: 100px;
+  font-family: 'Almendra', serif;
+  text-align: center;
+}
+
+h1#hobbetsy-title {
+  margin: -20px 0 10px 0;
+}
+
+#auth-nav-btn {
+  margin-bottom: 0;
 }
 
 .form-image-container{
-  position: relative;
-  width: fit-content;
+  /* border: 2px solid red; */
+  display: flex;
+  width: 100%;
+  max-height: 80%;
+  justify-content: flex-start;
+  margin: 1rem 0 2rem 0;
+  padding: 0 5rem 0 0;
+  align-items: center;
+  flex-direction: column;
 }
 
+
 .door-image-container{
- position: absolute;
- width: 50%;
- float: right;
+  /* border: 2px solid green; */
+  position: absolute;
+  /* margin: 0 auto; */
+  margin-right: 6px;
+  padding-right: 30vw;
+  max-width: 62%;
+  padding-top: 50px;
+ /* float: right; */
 }
 
 .door-image-container.door-open img{
   transform: rotateY(-180deg);
-  transition: 1s;
+  transition: 3s;
 }
 
 .shire-image-container{
-  position: absolute;
+  /* border: 2px solid blue; */
+  /* position: absolute; */
+  padding-right: 30vw;
+  padding-top: 50px;
+  max-width: 60%;
+}
+
+/*
+  width: 100%;
+  height: auto;
+  float: right;
+}*/
+
+.shire-image-container img{
+  width: 100%;
+}
+
+/* TODO ZOOM .shire-image-container.shire-zoom img{
+  border: 10px yellow solid;
+  transition: transform 3s;
+  transform: scale(1.5) translateX(-207px);
+} */
+
+.door-image-container img{
+  width: 100%;
+}
+
+.image-sizing{
+  height: 1000px;
+}
+
+.form-container{
+  /* border: 2px solid orange; */
+  /* position: absolute; */
+  margin-top: 100px;
+  margin-bottom: 10px;
+  padding: 2rem;
+  width: 30%;
+  font-family: 'Almendra', cursive;
+  font-size: 25px;
+  transition: transform .5s ease-in;
+  border-radius: 3px;
+}
+
+.form-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 4px rgba(153, 193, 180, 0.9);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-container form div {
+  /* border: 2px solid pink; */
+  float: left;
+  /* display: flex;
+  justify-content: flex-start; */
+  text-align: left;
+  padding-left: 1rem;
+  width: 90%;
+}
+
+.login-form-input {
+  margin: 0 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
   width: 50%;
   float: right;
 }
 
-.form-container{
-  position: absolute;
-  width: 50%;
-  float:left;
-  font-family: 'Almendra', cursive;
-  font-size: 15px;
+.login-form-input:focus {
+  outline: 2px solid #99c1b4;
 }
 
 .form-container>::placeholder{
@@ -46,10 +140,16 @@ font-family: 'Open Sans', sans-serif; */
   font-family: 'Almendra', cursive
 }
 
+.login-submit-btn {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
 .auth-nav{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  background-color: black;
 }
 
 .nav-items button{
