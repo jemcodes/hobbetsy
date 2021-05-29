@@ -44,8 +44,8 @@ h1#hobbetsy-title {
 }
 
 .door-image-container.door-open img{
-  transform: rotateY(-180deg);
-  transition: 1s;
+  transform: rotateY(-180deg) scale(3) translateX(-207px);
+  transition: 3s;
 }
 
 .shire-image-container{
@@ -66,10 +66,9 @@ h1#hobbetsy-title {
 }
 
 .shire-image-container.shire-zoom img{
-  transition: transform 1s;
   border: 10px yellow solid;
-  transform: scale(2);
-  transition: scale 5s;
+  transition: transform 3s;
+  transform: scale(3) translateX(-207px);
 }
 
 .door-image-container img{
