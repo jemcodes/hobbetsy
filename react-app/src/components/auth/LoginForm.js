@@ -43,10 +43,10 @@ const LoginForm = () => {
       <h1 id="hobbetsy-title">Hobbetsy</h1>
       <div className="form-image-container">
         <div className="shire-image-container">
-          <img src={the_shire} width="414px" />
+          <img src={the_shire} />
         </div>
         <div className={`door-image-container ${openDoor ? "door-open" : ""}`}>
-          <img src={bilbos_green_door} width="414px" />
+          <img src={bilbos_green_door} />
         </div>
         <div className="form-container">
           <form onSubmit={onLogin}>
@@ -58,6 +58,7 @@ const LoginForm = () => {
             <div>
               <label htmlFor="email">Email</label>
               <input
+                className="login-form-input"
                 name="email"
                 type="text"
                 placeholder="Enter Email"
@@ -68,14 +69,15 @@ const LoginForm = () => {
             <div>
               <label htmlFor="password">Password</label>
               <input
+                className="login-form-input"
                 name="password"
                 type="password"
                 placeholder="Enter Password"
                 value={password}
                 onChange={updatePassword}
               />
-              <button type="submit">Login</button>
             </div>
+              <button className="login-submit-btn" type="submit">Login</button>
           </form>
         </div>
       </div>

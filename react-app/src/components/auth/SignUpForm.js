@@ -51,18 +51,20 @@ const SignUpForm = () => {
       <h1 id="hobbetsy-title">Hobbetsy</h1>
       <div className="form-image-container">
           <div className="shire-image-container">
-            <img src={the_shire} width="414px" />
+            <img src={the_shire} />
           </div>
           <div className={`door-image-container ${openDoor ? "door-open" : ""}`}>
-            <img src={bilbos_green_door} width="414px" />
+            <img src={bilbos_green_door} />
           </div>
         <div className="form-container">
           <form onSubmit={onSignUp}>
             <div>
               <label>User Name</label>
               <input
+                className="login-form-input"
                 type="text"
                 name="username"
+                placeholder="Enter Username"
                 onChange={updateUsername}
                 value={username}
               ></input>
@@ -70,8 +72,10 @@ const SignUpForm = () => {
             <div>
               <label>Email</label>
               <input
+                className="login-form-input"
                 type="text"
                 name="email"
+                placeholder="Enter Email"
                 onChange={updateEmail}
                 value={email}
               ></input>
@@ -79,8 +83,10 @@ const SignUpForm = () => {
             <div>
               <label>Password</label>
               <input
+                className="login-form-input"
                 type="password"
                 name="password"
+                placeholder="Enter Password"
                 onChange={updatePassword}
                 value={password}
               ></input>
@@ -88,14 +94,16 @@ const SignUpForm = () => {
             <div>
               <label>Repeat Password</label>
               <input
+                className="login-form-input"
                 type="password"
                 name="repeat_password"
+                placeholder="Re-enter Password"
                 onChange={updateRepeatPassword}
                 value={repeatPassword}
                 required={true}
               ></input>
             </div>
-            <button type="submit">Sign Up</button>
+            <button className="login-submit-btn" type="submit">Sign Up</button>
           </form>
         </div>
       </div>

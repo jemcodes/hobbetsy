@@ -36,11 +36,11 @@ h1#hobbetsy-title {
 
 .door-image-container{
   border: 2px solid green;
- position: absolute;
- margin: 0 auto;
- padding-right: 30vw;
- /* width: 50%;
- float: right; */
+  position: absolute;
+  margin: 0 auto;
+  padding-right: 30vw;
+  max-width: 60%;
+ /* float: right; */
 }
 
 .door-image-container.door-open img{
@@ -51,8 +51,8 @@ h1#hobbetsy-title {
 .shire-image-container{
   border: 2px solid blue;
   position: absolute;
-  object-fit: cover;
   padding-right: 30vw;
+  max-width: 60%;
 }
   /*
   width: 100%;
@@ -61,25 +61,49 @@ h1#hobbetsy-title {
 }*/
 
 .shire-image-container img{
-    width: 100%;
+  width: 100vw;
 }
 
 .door-image-container img{
-  width: 100%;
+  width: 100vw;
 }
 
 .image-sizing{
-  height: 1000px;
+  height: 100%;
 }
 
 .form-container{
-  border: 2px solid orange;
-  position: relative;
-  margin-top: 650px;
+  /* border: 2px solid orange; */
+  position: absolute;
+  /* margin-top: 650px;
+  margin-bottom: 10px; */
   width: 50%;
   font-family: 'Almendra', cursive;
   font-size: 25px;
+}
 
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-container form div {
+  /* border: 2px solid pink; */
+  float: left;
+  /* display: flex;
+  justify-content: flex-start; */
+  text-align: left;
+  padding-left: 1rem;
+  width: 90%;
+}
+
+.login-form-input {
+  margin: 0 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
+  width: 50%;
+  float: right;
 }
 
 .form-container>::placeholder{
@@ -89,6 +113,11 @@ h1#hobbetsy-title {
 
 ::placeholder{
   font-family: 'Almendra', cursive
+}
+
+.login-submit-btn {
+  margin-top: 10px;
+  font-size: 16px;
 }
 
 .auth-nav{
