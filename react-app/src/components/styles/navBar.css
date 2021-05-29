@@ -1,13 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Open+Sans&display&family=Almendra&display=swap');
+/* font-family: 'Almendra', serif;
+font-family: 'Almendra Display', cursive;
+font-family: 'Open Sans', sans-serif; */
+
 .navContainer{
-    border: 3px solid red;
+    border-bottom: 2px solid rgba(1, 101, 68, 0.5);
     display: flex;
     height: 75px;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fdfaf6;
+    z-index: 1  ;
 }
+
+#nav-right-div a{
+    margin-right: 4vw;
+} 
+
+#nav-right-div button{
+    width: 100px;
+} 
 
 .main-logo{
     max-height: 150px;
     margin-top: 2px;
 }
+#outer-search-div {
+    width: 40%;
+    margin-left: 10vw;
+    /* border: 3px solid red; */
+}
 
+.search-div input {
+    line-height: 1.8rem;
+    width: 90%;
+    font-size: 1.1rem;
+    font-family: 'Almendra', serif;
+    color: rgba(0,0,0,0.8);
+    padding-left: 4px;
+    min-width: 300px;
+    border: 2px solid lightgrey;
+    border-radius: 2px;
+}
+.search-div input:focus {
+    outline: none;
+    border: 2px solid rgba(1, 101, 68, 0.5);
+}
+
+#nav-right-div{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 2px solid red; */
+    align-items: center;
+    margin-right: 0;
+}
+
+#search-results-div {
+    position: absolute;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 4px;
+    /* border: 1px solid rgba(0,0,0,0.5); */
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.3);
+    width: 36%;
+    height: auto;
+    /* padding: 2px 4px; */
+    font-size: 1.3rem;
+    z-index: 1;
+}
+
+.populated-search-results {
+    font-family: 'Almendra', serif;
+    text-decoration: none;
+    border-radius: 2px;
+    margin: 6px 4px;
+    text-decoration: none;
+}
+.populated-search-results:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.populated-search-results a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.8);
+    padding-left: 4px;
+}
+
+.populated-search-results a:hover {
+    text-decoration: none;
+}
+
+#no-results {
+    color: rgba(0,0,0,0.8);
+    margin: 6px 4px;
+    font-family: 'Almendra', serif;
+}
+
+#logout-btn:hover {
+    cursor: pointer;
+}
