@@ -39,10 +39,15 @@ const SignUpForm = () => {
   };
 
   let openDoor = false;
+  let shireZoom = false;
   if (user) {
     openDoor = true
     setTimeout(() => {
-      history.push('/');
+      shireZoom = true;
+      console.log("AM I TRUE: ", shireZoom)
+      setTimeout(() => {
+        history.push('/');
+      }, 5000)
     }, 1000)
   }
 
@@ -50,12 +55,12 @@ const SignUpForm = () => {
     <>
       <h1 id="hobbetsy-title">Hobbetsy</h1>
       <div className="form-image-container">
-          <div className="shire-image-container">
-            <img src={the_shire} />
-          </div>
-          <div className={`door-image-container ${openDoor ? "door-open" : ""}`}>
-            <img src={bilbos_green_door} />
-          </div>
+        <div className="shire-image-container">
+          <img src={the_shire} />
+        </div>
+        <div className={`door-image-container ${openDoor ? "door-open" : ""}`}>
+          <img src={bilbos_green_door} />
+        </div>
         <div className="form-container">
           <form onSubmit={onSignUp}>
             <div>
