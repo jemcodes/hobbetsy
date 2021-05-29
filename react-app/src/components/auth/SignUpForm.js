@@ -39,16 +39,11 @@ const SignUpForm = () => {
   };
 
   let openDoor = false;
-  let shireZoom = false;
   if (user) {
     openDoor = true
     setTimeout(() => {
-      shireZoom = true;
-      console.log("AM I TRUE: ", shireZoom)
-      setTimeout(() => {
-        history.push('/');
-      }, 5000)
-    }, 1000)
+      history.push('/');
+    }, 3000)
   }
 
   return (

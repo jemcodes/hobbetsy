@@ -31,11 +31,10 @@ const LoginForm = () => {
   };
 
   let openDoor = false;
-  let shireZoom = false;
+  // TODO ZOOM let shireZoom = false;
   if (user) {
     openDoor = true
-    shireZoom = true;
-    console.log("AM I TRUE: ", shireZoom)
+    // TODO ZOOM shireZoom = true;
     setTimeout(() => {
       history.push('/');
     }, 3000)
@@ -45,7 +44,8 @@ const LoginForm = () => {
     <>
       <h1 id="hobbetsy-title">Hobbetsy</h1>
       <div className="form-image-container">
-        <div className={`shire-image-container ${shireZoom ? "shire-zoom" : ""}`}>
+        {/* TODO ZOOM <div className={`shire-image-container ${shireZoom ? "shire-zoom" : ""}`}> */}
+        <div className="shire-image-container">
           <img src={the_shire} />
         </div>
         <div className={`door-image-container ${openDoor ? "door-open" : ""}`}>
