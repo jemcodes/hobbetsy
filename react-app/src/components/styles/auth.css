@@ -7,20 +7,32 @@ font-family: 'Open Sans', sans-serif; */
   background-color: #fdfaf6;
 }
 
+#hobbetsy-title {
+  font-size: 80px;
+  font-family: 'Almendra', serif;
+  text-align: center;
+}
+
+h1#hobbetsy-title {
+  margin: -20px 0 10px 0;
+}
+
+#auth-nav-btn {
+  margin-bottom: 0;
+}
+
 .form-image-container{
   border: 2px solid red;
   display: flex;
   width: 100%;
-  min-height: 1000px;
-  justify-content: center;
-  padding: 3rem 5rem 0 0;
+  max-height: 80%;
+  justify-content: flex-start;
+  margin: 1rem 0 2rem 0;
+  padding: 0 5rem 0 0;
   align-items: center;
   flex-direction: column;
 }
 
-.image-container-auth{
-  position: relative;
-}
 
 .door-image-container{
   border: 2px solid green;
@@ -61,10 +73,13 @@ font-family: 'Open Sans', sans-serif; */
 }
 
 .form-container{
-  /* position: absolute; */
+  border: 2px solid orange;
+  position: relative;
+  margin-top: 650px;
   width: 50%;
   font-family: 'Almendra', cursive;
   font-size: 25px;
+
 }
 
 .form-container>::placeholder{

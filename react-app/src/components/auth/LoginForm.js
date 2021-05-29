@@ -40,6 +40,7 @@ const LoginForm = () => {
 
   return (
     <>
+      <h1 id="hobbetsy-title">Hobbetsy</h1>
       <div className="form-image-container">
         <div className="shire-image-container">
           <img src={the_shire} width="414px" />

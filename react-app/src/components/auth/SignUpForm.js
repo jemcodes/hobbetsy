@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
-import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { signUp } from '../../store/session';
 import bilbos_green_door from "../../images/bag_end_door.png";
 import the_shire from "../../images/shire.png";
@@ -13,6 +13,7 @@ const SignUpForm = () => {
   const [repeatPassword, setRepeatPassword] = useState("");
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const onSignUp = async (e) => {
     e.preventDefault();
@@ -37,21 +38,24 @@ const SignUpForm = () => {
     setRepeatPassword(e.target.value);
   };
 
+  let openDoor = false;
   if (user) {
-    return <Redirect to="/" />;
+    openDoor = true
+    setTimeout(() => {
+      history.push('/');
+    }, 1000)
   }
 
   return (
     <>
+      <h1 id="hobbetsy-title">Hobbetsy</h1>
       <div className="form-image-container">
-        <div className="image-container-auth">
-          <div className="door-image-container">
-            <img className="image-sizing" src={bilbos_green_door} />
-          </div>
           <div className="shire-image-container">
-            <img className="image-sizing" src={the_shire} />
+            <img src={the_shire} width="414px" />
           </div>
-        </div>
+          <div className={`door-image-container ${openDoor ? "door-open" : ""}`}>
+            <img src={bilbos_green_door} width="414px" />
+          </div>
         <div className="form-container">
           <form onSubmit={onSignUp}>
             <div>
