@@ -7,8 +7,9 @@
 .about-main-container{
     /* border: 3px solid red; */
     margin-top: 50px;
-    height: 80vh;
-    margin-bottom: 200px;
+    /* height: 80vh; */
+    margin-bottom: 100px;
+
 }
 
 .about-biline-holder{
@@ -51,6 +52,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
 }
 
 
