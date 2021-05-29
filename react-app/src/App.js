@@ -19,7 +19,6 @@ import About from "./components/About"
 import { displayProducts } from './store/product';
 import { displayItems } from './store/cart'
 import { authenticate } from "./store/session";
-import Footer from "./components/Footer";
 
 function App() {
   const user = useSelector(state => state.session.user)
@@ -88,7 +87,6 @@ function App() {
           <About />
         </Route>
       </Switch>
-        {<Footer />}
     </BrowserRouter>
   );
 }

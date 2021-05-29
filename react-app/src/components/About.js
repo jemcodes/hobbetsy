@@ -2,6 +2,7 @@ import React from 'react'
 import "./styles/about.css"
 import { NavLink } from 'react-router-dom'
 import NavBar from './NavBar';
+import Footer from './Footer';
 import lisaHeadshot from '../images/lisa-headshot.png';
 import janeHeadshot from '../images/jane-headshot.png';
 import patrickHeadshot from '../images/patrick-headshot.png';
@@ -98,6 +99,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

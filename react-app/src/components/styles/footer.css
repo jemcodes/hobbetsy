@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Open+Sans&display&family=Almendra&display=swap');
 
+.footer{
+    margin-top: 20px;
+    background-color: #FDFAF6;
+}
 
 .footer-main-container{
     /* border: 3px solid red; */
     border-top: 1px solid rgba(1, 101, 68, .5);
-    box-shadow: 0 3px 20px 10px rgba(1, 101, 68, .5);
+    /* box-shadow: 0 3px 20px 10px rgba(1, 101, 68, .5); */
     height: 115px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    position: sticky;
-    bottom: 0;
-    
 }
 
 #footer-dev-title{

@@ -5,6 +5,7 @@ import { displayItems } from '../store/cart';
 import CartItem from './CartItem';
 import Checkout from './Checkout';
 import NavBar from './NavBar';
+import Footer from './Footer';
 import './styles/cart.css';
 
 function Cart() {
@@ -73,6 +74,7 @@ function Cart() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
