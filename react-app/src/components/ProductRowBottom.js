@@ -9,7 +9,7 @@ function ProductRowBottom() {
         return state.products.list.map(productId => state.products[productId])
     });
 
-    const product1 = productList[27];
+    const product1 = productList[28];
     const product2 = productList[25];
     const product3 = productList[24];
     const product4 = productList[26];
