@@ -9,6 +9,7 @@ import ProductRowBottom from './ProductRowBottom';
 import FeatureRow from './FeatureRow';
 import NavBar from './NavBar';
 import './styles/product.css'
+import UniqueRow from './UniqueRow';
 
 function Product() {
     const dispatch = useDispatch();
@@ -24,6 +25,7 @@ function Product() {
         <div>
             {<NavBar />}
             {<ProductRow />}
+            {<UniqueRow />}
             {<FeatureRow />}
             {<ProductRowBottom />}
         </div>
