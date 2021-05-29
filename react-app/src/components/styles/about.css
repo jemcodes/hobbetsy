@@ -1,31 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Open+Sans&display&family=Almendra&display=swap');
+
+.about-whole{
+    background-image: url(../../images/850445.jpg);
+}
+
 .about-main-container{
-    border: 3px solid red;
+    /* border: 3px solid red; */
+    margin-top: 50px;
     height: 80vh;
+}
+
+.about-biline-holder{
+    /* border: 3px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .about-biline-container{
     /* border: 3px solid pink; */
+    max-width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(253, 250, 246, .90);
+    border-radius: 10px;
     display: flex;
+    font-family: 'Almendra', serif;
     flex-direction: column;
     align-items: center;
 }
 
 #about-biline{
-    max-width: 60%;
+    font-size: 18px;
+}
+
+.about-blurb-container{
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-devs-container{
     /* border: 3px solid blue; */
     background-color: rgba(0, 0, 0);
+    border-bottom: 1px solid;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+
 .about-dev-card{
     /* border: 3px solid green; */
     max-width: 100%;
+}
+
+.about-dev-link-container{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
 }
 
 .about-dev-info-container{
@@ -36,8 +72,17 @@
     flex-direction: column;
 }
 
-.about-dev-link-container{
-    /* border: 3px solid orange; */
+.about-dev-name{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 3px;
+
+}
+
+.about-dev-link{
+    text-decoration: none;
+    color: #016544;
+    padding: 2px;
 }
 
 .about-dev-project-links{

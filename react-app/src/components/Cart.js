@@ -41,33 +41,36 @@ function Cart() {
     return (
         <div>
             <NavBar />
-            <div className="cart-top-container">
-                <div className="cart-username-container">
-                    <p className="cart-username">{user.username}'s Cart</p>
-                </div>
-                <p className="cart-account-standing">Your account's tab is in good standing with the shopkeep.</p>
-                <div className="checkout-button-container">
-                    <Checkout />
-                </div>
-            </div>
-            <hr className="cart-item-separator" />
-            <div className="cart-items-container">
-                {userCart.map(itemList => (
-                    total += itemList.product_price,
-                    <div className="cart-item-container">
-                        <CartItem itemList={itemList}/>
-                        <hr className="cart-item-separator" />
+            <div className="whole-cart-container">
+                <div className="cart-top-container">
+                    
+                    <div className="cart-username-container">
+                        <p className="cart-username">{user.username}'s Cart</p>
                     </div>
-                    ))}
-            </div>
-            <hr className="cart-item-separator" />
-            <div className="cart-bottom-container">
-                <div className="checkout-price-container">
-                    <h3 id="checkout-price">TOTAL PRICE: ₲ {total}</h3>
+                    <p className="cart-account-standing">Your account's tab is in good standing with the shopkeep.</p>
+                    <div className="checkout-button-container">
+                        <Checkout />
+                    </div>
                 </div>
+                <hr className="cart-item-separator" />
+                <div className="cart-items-container">
+                    {userCart.map(itemList => (
+                        total += itemList.product_price,
+                        <div className="cart-item-container">
+                            <CartItem itemList={itemList}/>
+                            <hr className="cart-item-separator" />
+                        </div>
+                        ))}
+                </div>
+                <hr className="cart-item-separator" />
+                <div className="cart-bottom-container">
+                    <div className="checkout-price-container">
+                        <h3 id="checkout-price">TOTAL PRICE: ₲ {total}</h3>
+                    </div>
 
-                <div className="checkout-button-container">
-                    <Checkout />
+                    <div className="checkout-button-container">
+                        <Checkout />
+                    </div>
                 </div>
             </div>
         </div>
