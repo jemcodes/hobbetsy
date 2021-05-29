@@ -143,6 +143,7 @@ h1#hobbetsy-title {
 .login-submit-btn {
   margin-top: 10px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .auth-nav{
@@ -155,4 +156,5 @@ h1#hobbetsy-title {
 .nav-items button{
   width: 8vw;
   margin: 1rem;
+  cursor: pointer;
 }
