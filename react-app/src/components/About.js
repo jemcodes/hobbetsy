@@ -30,12 +30,12 @@ const About = () => {
                         <div className="about-dev-info-container">
                             <div className="about-dev-name"> jane Martin</div>
                             <div className="about-dev-link-container">
-                            <a className="about-dev-link" href="https://github.com/jemcodes">github</a>
-                            <a className="about-dev-link" href="https://www.linkedin.com/in/jemcodes/">linkedin</a>
+                            <a className="about-dev-link" href="https://github.com/jemcodes" target="_blank">github</a>
+                            <a className="about-dev-link" href="https://www.linkedin.com/in/jemcodes/" target="_blank">linkedin</a>
                             <div className="about-dev-project-links">
                                 <p>Other Apps by the developer:</p>
-                                <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/">travelscape</a>
-                                <a className="about-dev-link" href="https://gin-and-tonnies.herokuapp.com/">Gin and Tonnies</a>
+                                <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/" target="_blank">travelscape</a>
+                                <a className="about-dev-link" href="https://gin-and-tonnies.herokuapp.com/" target="_blank">Gin and Tonnies</a>
                             </div>
                             </div>
                         </div>
@@ -48,12 +48,12 @@ const About = () => {
                             <div className="about-dev-name">Lisa Noor</div>
                             <div className="about-dev-link">
                             <div className="about-dev-link-container">
-                                <a className="about-dev-link" href="https://github.com/Skulllady">github</a>
-                                <a className="about-dev-link" href="https://www.linkedin.com/in/lisa-noor-hoque-976120208/">linkedin</a>
+                                <a className="about-dev-link" href="https://github.com/Skulllady" target="_blank">github</a>
+                                <a className="about-dev-link" href="https://www.linkedin.com/in/lisa-noor-hoque-976120208/" target="_blank">linkedin</a>
                                 <div className="about-dev-project-links">
                                     <p>Other Apps by the developer:</p>
-                                    <a className="about-dev-link" href="https://brainfood-app.herokuapp.com/users/login">brainfood</a>
-                                    <a className="about-dev-link" href="https://captainslog-2323.herokuapp.com/">captainslog</a>
+                                    <a className="about-dev-link" href="https://brainfood-app.herokuapp.com/users/login" target="_blank">brainfood</a>
+                                    <a className="about-dev-link" href="https://captainslog-2323.herokuapp.com/" target="_blank">captainslog</a>
                                 </div>
                             </div>
                             </div>
@@ -68,12 +68,12 @@ const About = () => {
                             <div className="about-dev-name">Patrick Nusbaum</div>
                             <div className="about-dev-link"></div>
                             <div className="about-dev-link-container">
-                                <a className="about-dev-link" href="https://github.com/patricknuttree">github</a>
-                                <a className="about-dev-link" href="www.linkedin.com/in/patrick-nusbaum-mpa">linkedin</a>
+                                <a className="about-dev-link" href="https://github.com/patricknuttree" target="_blank">github</a>
+                                <a className="about-dev-link" href="www.linkedin.com/in/patrick-nusbaum-mpa" target="_blank">linkedin</a>
                                 <div className="about-dev-project-links">
                                     <p>Other Apps by the developer:</p>
-                                    <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/">travelscape</a>
-                                    <a className="about-dev-link" href="https://the-pour.herokuapp.com/">The-Pour</a>
+                                    <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/" target="_blank">travelscape</a>
+                                    <a className="about-dev-link" href="https://the-pour.herokuapp.com/" target="_blank">The-Pour</a>
                                 </div>
                             </div>
                         </div>
@@ -86,12 +86,12 @@ const About = () => {
                             <div className="about-dev-name">Jamie Sullivan</div>
                             <div className="about-dev-link"></div>
                             <div className="about-dev-link-container">
-                                <a className="about-dev-link" href="https://github.com/bilbopicard">github</a>
-                                <a className="about-dev-link" href="https://www.linkedin.com/in/sullivan-jamie/">linkedin</a>
+                                <a className="about-dev-link" href="https://github.com/bilbopicard" target="_blank">github</a>
+                                <a className="about-dev-link" href="https://www.linkedin.com/in/sullivan-jamie/" target="_blank">linkedin</a>
                                 <div className="about-dev-project-links">
                                     <p>Other Apps by the developer:</p>
-                                    <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/">travelscape</a>
-                                    <a className="about-dev-link" href="https://app-bottoms-up.herokuapp.com/signup">BottomsUp</a>
+                                    <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/" target="_blank">travelscape</a>
+                                    <a className="about-dev-link" href="https://app-bottoms-up.herokuapp.com/signup" target="_blank">BottomsUp</a>
                                 </div>
                             </div>
                         </div>

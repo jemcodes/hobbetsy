@@ -5,6 +5,7 @@ import { signUp } from '../../store/session';
 import bilbos_green_door from "../../images/bag_end_door.png";
 import the_shire from "../../images/shire.png";
 import AuthNavBar from './AuthNavBar';
+import Footer from '../Footer';
 import '../styles/auth.css';
 
 const SignUpForm = () => {
@@ -109,6 +110,7 @@ const SignUpForm = () => {
           </form>
         </div>
       </div>
+      {<Footer />}
     </div>
   );
 };

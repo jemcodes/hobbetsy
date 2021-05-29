@@ -8,6 +8,7 @@ import ProductRow from './ProductRow';
 import ProductRowBottom from './ProductRowBottom';
 import FeatureRow from './FeatureRow';
 import NavBar from './NavBar';
+import Footer from './Footer';
 import './styles/product.css'
 import UniqueRow from './UniqueRow';
 
@@ -28,6 +29,7 @@ function Product() {
             {<UniqueRow />}
             {<FeatureRow />}
             {<ProductRowBottom />}
+            {<Footer />}
         </div>
 
     )
