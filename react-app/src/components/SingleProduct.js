@@ -6,6 +6,7 @@ import CreateReview from "./CreateReview";
 import Review from "./Review.js";
 import AddingToCart from "./AddingToCart.js";
 import NavBar from './NavBar';
+import Footer from './Footer';
 import './styles/singleProduct.css';
 
 
@@ -38,6 +39,7 @@ function SingleProduct() {
                     <CreateReview />
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
