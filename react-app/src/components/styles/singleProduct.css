@@ -28,6 +28,7 @@ button {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 100px;
 }
 
 #single-prod-info {
@@ -64,6 +65,10 @@ h3#single-prod-title {
     font-family: 'Almendra Display', cursive;
     margin: 0;
     padding: 0;
+}
+
+#single-prod-guarani {
+    font-size: 1.2rem;
 }
 
 p#single-prod-price {
