@@ -2,7 +2,6 @@ from app.models import db, Product
 
 
 def seed_products():
-
     """SWORDS"""
     short_sword = Product(title="Short Sword",
                           image="https://1.bp.blogspot.com/-iV-ILYgMtsg/WqgeQbw-efI/AAAAAAAADOI/eXxSIeSTWgwibevUdl1OtgapAZ5w3thogCLcBGAs/s1600/Polished%2BAncient%2BSteel%2BSword.png",
@@ -71,9 +70,9 @@ def seed_products():
 
     """AXES"""
     dull_axe = Product(title="Dull Axe", image="https://2.bp.blogspot.com/-yJ-qHbtkjPQ/WtOlh3AV9RI/AAAAAAAADi4/46Xf9q7l6eUyGXmTEuvjxUtYoH5VgZ9QwCLcBGAs/s1600/Iron%2BAxe%2B%2528Galadhrim%2BAxe%2Bof%2BCombat%2Band%2BTactics%2529.png",
-                        price=50, description="I wouldn't say it will split skulls,\
+                       price=50, description="I wouldn't say it will split skulls,\
                         but it might cut a melon", lore="This axe, at one time, was sharp.",
-                        quantity=1, category_id=1)
+                       quantity=1, category_id=1)
     huntsmans_axe = Product(title="Huntsman's Axe", image="https://1.bp.blogspot.com/-tPH6WeUgW3M/WtO52z4JaYI/AAAAAAAADls/w3OSTE2WOqsAw_F6ZTyXjpdC724CINRHgCLcBGAs/s1600/Potent%2BAxe%2Bof%2Bthe%2BDeep%2B%2528Polished%2BFangorn%2BAxe%2Bof%2BStrength%2529.png",
                             price=100,
                             description="This axe is great for a man hunting.\
@@ -81,12 +80,12 @@ def seed_products():
                             got what you're looking for! The Huntsman's Axe!",
                             lore="", quantity=500, category_id=1)
     obsidian_axe = Product(title="Obsidian Axe", image="https://2.bp.blogspot.com/-W3i-bZwWeHg/WtOsikhznaI/AAAAAAAADko/oe0molH3mmQTgtbLQ975EI2ocS1NKkJfwCLcBGAs/s1600/Champion%2527s%2BAxe%2Bof%2Bthe%2BThird%2BAge%2B75.png",
-                            price=150,
+                           price=150,
                            description="This axe cuts through like a cold,\
                            dark night. Silent and terrifying.", lore="",
                            quantity=600, category_id=1)
     dwarven_axe = Product(title="Dwarven Axe", image="https://1.bp.blogspot.com/-0ffwfYTYoyg/WtS4CzyM1VI/AAAAAAAADok/4DPKzb85Ql88773dUcrj76V9I_ychTONwCLcBGAs/s1600/Champion%2527s%2BGreat%2BAxe%2Bof%2Bthe%2BFIrst%2BAge%2B59.png",
-                            price=600,
+                          price=600,
                           description="Forged within the depths of Moria.\
                           Smelted through ages of experience, sweat, blood,\
                           and dragon tears.", lore="", quantity=100,
@@ -105,7 +104,7 @@ def seed_products():
                         favorite of the men of Rohan", quantity=3000,
                         category_id=1)
     elven_bow = Product(title="Elven Bow", image="https://wow.zamimg.com/uploads/screenshots/normal/433155-thoridal-the-stars-fury.jpg",
-                         price=400, description="\
+                        price=400, description="\
                         Features delicate carvings painted gold. Known for\
                         accuracy from great distances. Elegant and effective.",
                         lore="Hewn from the trees of Lothlorien", quantity=100,
@@ -113,19 +112,19 @@ def seed_products():
 
     """MACES"""
     wooden_club = Product(title="Wooden Club", image="https://3.bp.blogspot.com/-fJRu2TjIgZU/W1JWsyZRRCI/AAAAAAAAEF0/hHlvtvAnwGghukg0ESi_H253WT68VBVQgCLcBGAs/s1600/Ash%2BClub%2B%2528Heavy%2BAsh%2BClub%2Bof%2BVitality%2529.png",
-                            price=15,
+                          price=15,
                           description="Nine out of ten cavemen agree: this\
                           wooden club will at least get you home from work.",
                           lore="Definitely didn't find it on the side of the\
                           road.", quantity=1, category_id=1)
     flanged_mace = Product(title="Flanged Mace", image="https://1.bp.blogspot.com/-JIqZCZEwLBU/W06Kz5EFyvI/AAAAAAAAD6s/zk11VBxgn4IWyAzmhvgaqflr1G15eroGACLcBGAs/s1600/Forged%2BElven-steel%2BMace%2Bof%2BCombat.png",
-                            price=600,
+                           price=600,
                            description="A highly-specialized mace designed for\
                            punching through armor. Heavy and indestructable.",
                            lore="Has ruined more than one game of whack-a-mole\
                            ", quantity=1900, category_id=1)
     stone_club = Product(title="Stone Club", image="https://3.bp.blogspot.com/-Wf7AIzgCaNQ/W1JYhGeZKqI/AAAAAAAAEHQ/KsUtA6DCNz8hJtZcVFDhjV6gQvvTKuyaQCLcBGAs/s1600/Old%2BReliable.png",
-                            price=20,
+                         price=20,
                          description="Avid stone club users know how hard it\
                          is to find the perfect stone for a club. This, my\
                          friends, is it.", lore="Definitely also not found on\
@@ -144,7 +143,7 @@ def seed_products():
                             upgrade.", lore="Also definitely not found on the\
                             side of the road.", quantity=2800, category_id=2)
     aspi = Product(title="Aspi", image="https://1.bp.blogspot.com/-R8vQKwyX9d8/XWf0nlUQ8JI/AAAAAAAAFFg/JB6BrLkArTMslNNyvm0Kosew-JQgZ6ABwCLcBGAs/s1600/Shield%2Bof%2BAnfalas.png",
-                    price=600,
+                   price=600,
                    description="Heavy-duty,\
                    metal-studded, but unfortunately not waterproof. Please\
                    stop asking.", lore="Used by a civilization where the\
@@ -185,7 +184,7 @@ def seed_products():
 
     """FOOD AND DRINK"""
     lembas_bread = Product(title="Lembas Bread",
-                        image="https://cdn.mos.cms.futurecdn.net/rX8mEDef3UR4WNKdg3kTFW-1200-80.jpg",
+                           image="https://cdn.mos.cms.futurecdn.net/rX8mEDef3UR4WNKdg3kTFW-1200-80.jpg",
                            price=15,
                            description="A bite will satisfy a man a day.",
                            lore="", quantity=42, category_id=4)
@@ -196,20 +195,51 @@ def seed_products():
                             lore="It's been said Legolas drank a cask and felt\
                             a tingle.", quantity=6, category_id=4)
     gollum_grog = Product(title="Gollum Grog", image="https://wow.zamimg.com/uploads/screenshots/small/64740.jpg",
-                            price=2000,
+                          price=2000,
                           description="Everyone looks good after ten, my\
                           precious. A real loincloth-dropper.", lore="Strong\
                           enough to bring Deagol back.", quantity=10,
                           category_id=4)
     potatoes = Product(title="Potatoes",
-                        image="https://images.unsplash.com/photo-1533384159656-84b8ae5ce5e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=80", price=2000,
+                       image="https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80", price=2000,
                        description="Boil 'em, mash 'em, stick 'em in stew.",
                        lore="Boil 'em, mash 'em, stick 'em in stew.",
                        quantity=100, category_id=4)
-    apple = Product(title="apple", image="https://4.bp.blogspot.com/-k2mjuRD0jYs/WrLr_OUCP9I/AAAAAAAADXI/D4xpVmsrL4gGnBrlc559w2wPEbdvsJxqgCLcBGAs/s1600/Satella_Picnic_Ver2.png",
+    apple = Product(title="Apples", image="https://images.unsplash.com/photo-1611574474484-ced6cb70a2cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
                     price=10, description="uh apple",
                     lore="This apple is menacing", quantity=1,
                     category_id=4)
+    ring = Product(title='A gold ring',
+                   image='https://cdn.pixabay.com/photo/2016/09/15/07/05/ring-1671094_1280.jpg',
+                   price=1000,
+                   description='This is a rather ordinary gold ring. Some might call it boring. Every once in awhile some pretty letters appear on it which is cool.',
+                   lore='Just a regular old ring',
+                   category_id=5
+                   )
+    anduril = Product(
+        title='Andúril',
+        image='https://1.bp.blogspot.com/-iP36mifbTyk/WqgSM9ZMdJI/AAAAAAAADNU/mmbN0K5TxPAmO8SP0K43_I95yAIH3HgRACLcBGAs/s1600/Minstrel%2527s%2BSword%2Bof%2Bthe%2BFirst%2BAge%2B60.png',
+        price=10000,
+        description='Forged from the shards of Narsil... This blade was wielded by eventual King of Gondor, Aragorn, to purge Middle Earth of the Dark Lord.',
+        lore='Also works well to cut potatoes.',
+        category_id=5
+    )
+    glamdring = Product(
+        title='Glamdring',
+        image='https://2.bp.blogspot.com/-SDBuOAkJHlo/WqgSJHFifXI/AAAAAAAADM8/VvVEHVtXgZAz91VbqqtH0YfHVgunlJiQACLcBGAs/s1600/Free-cutter.png',
+        price=3000,
+        description='The sword of the wizard Gandalf. Better known for his fireworks and sweet hat he, apparently, also had a sword.',
+        lore='This blade was used to fell a demon of the ancient world in the depths of Moria.',
+        category_id=5
+    )
+    sting = Product(
+        title='Sting',
+        image='https://4.bp.blogspot.com/-ozBYwENBlL8/W00qw94JKsI/AAAAAAAAD2c/s7LxdMoqq3gHaZaBsBBnXMCItN5aRfHZACLcBGAs/s1600/Dagger%2Bof%2Bthe%2BThird%2BAge%2B95%2B%2528Relic-master%2529.png',
+        price=6969,
+        description='This blade was used by Bilbo the Great on his adventures to the Lonely Mountain and later by Frodo the Mighty in his quest to save Middle Earth.',
+        lore='Rumor has it that the blade glows when orcs are near...',
+        category_id=5
+    )
 
     """HORSES"""
     """MAGIC"""
@@ -244,6 +274,10 @@ def seed_products():
     db.session.add(gollum_grog)
     db.session.add(potatoes)
     db.session.add(apple)
+    db.session.add(ring)
+    db.session.add(anduril)
+    db.session.add(glamdring)
+    db.session.add(sting)
 
     db.session.commit()
 

@@ -39,6 +39,7 @@ body {
 .product-row-top-div-inner:hover {
     transform: scale(1.02);
     box-shadow: 0px 0px 4px rgba(1, 101, 68, 0.5);
+    background-color: white;
 }
 
 #product-row-top-div a{
