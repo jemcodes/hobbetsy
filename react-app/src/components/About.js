@@ -14,7 +14,7 @@ const About = () => {
             <div className="about-main-container">
                 <div className="about-biline-container">
                     <h1>About Hobbetsy</h1>
-                    <p id="about-biline">Looking for a sword, armor or just some good old fashioned potatoes look no farther than Hobbetsy. We supply it all. A wise grey wizard once said if you cant find it on Hobbetsy you don't need it for questing. Soon we will be introducing Hobbetsy prime which promises two day shipping to all places in middle earth. Excluding Mordor shipping to Mordor requires additional shipping costs and a fellowship.</p>
+                    <p id="about-biline">Looking for a sword, armor or just some good old fashioned potatoes look no farther than Hobbetsy. We supply it all. A wise grey wizard once said if you cant find it on Hobbetsy you don't need it for questing. Soon we will be introducing Hobbetsy prime which promises two day shipping to all places in middle earth. Excluding Mordor, shipping to Mordor requires additional shipping costs and a fellowship.</p>
                 </div>
                 <div className="about-devs-container">
                     <div className="about-dev-card">
@@ -84,7 +84,7 @@ const About = () => {
                                 <div className="about-dev-project-links">
                                     <p>Other Apps by the developer:</p>
                                     <NavLink className="about-dev-link" to="https://travelscape-app.herokuapp.com/">travelscape</NavLink>
-                                    <NavLink className="about-dev-link" to="https://app-bottoms-up.herokuapp.com/signup">BottumsUp</NavLink>
+                                    <NavLink className="about-dev-link" to="https://app-bottoms-up.herokuapp.com/signup">BottomsUp</NavLink>
                                 </div>
                             </div>
                         </div>
