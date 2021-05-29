@@ -1,0 +1,46 @@
+.about-main-container{
+    border: 3px solid red;
+}
+
+.about-biline-container{
+    border: 3px solid pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-biline{
+    max-width: 60%;
+}
+
+.about-devs-container{
+    border: 3px solid blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about-dev-card{
+    border: 3px solid green;
+    max-width: 100%;
+}
+
+.about-dev-info-container{
+    border: 3px solid yellow;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-dev-link-container{
+    border: 3px solid orange;
+}
+
+.about-dev-project-links{
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
