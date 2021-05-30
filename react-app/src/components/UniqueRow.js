@@ -9,11 +9,13 @@ function UniqueRow() {
         return state.products.list.map(productId => state.products[productId])
     });
 
-    const product1 = productList[29];
+    const product1 = productList[27];
     const product2 = productList[30];
     const product3 = productList[31];
     const product4 = productList[32];
-    const product5 = productList[27]
+    const product5 = productList[29];
+    const product6 = productList[33];
+    const product7 = productList[34];
 
     return (
         <>
@@ -33,6 +35,22 @@ function UniqueRow() {
                         <img id='potatoes' src={product5?.image} />
                         <p className='unique-lore'>{product5?.lore}</p>
                         <p><span class='guarani'>₲</span>{product5?.price}</p>
+                    </div>
+                </NavLink>
+                <NavLink to={`/products/${product6?.id}`}>
+                    <div className='unique-row-top-div-inner'>
+                        <h4>{product6?.title}</h4>
+                        <img id='mithril' src={product6?.image} />
+                        <p className='unique-lore'>{product6?.lore}</p>
+                        <p><span class='guarani'>₲</span>{product6?.price}</p>
+                    </div>
+                </NavLink>
+                <NavLink to={`/products/${product7?.id}`}>
+                    <div className='unique-row-top-div-inner'>
+                        <h4>{product7?.title}</h4>
+                        <img id='mithril' src={product7?.image} />
+                        <p className='unique-lore'>{product7?.lore}</p>
+                        <p><span class='guarani'>₲</span>{product7?.price}</p>
                     </div>
                 </NavLink>
             </div>
