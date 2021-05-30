@@ -1,98 +1,124 @@
-# Flask React Project
+# Welcome to Hobbetsy!
+![Hobbetsy Logo](react-app/src/images/hobbetsylogoNB.png)
 
-This is the backend for the Flask React project.
+### Hobbetsy is an app dedicated to making sure that all people in middle earth are equipped to face what ever life can throw at them. Be it a Balrauq in the depts of moria or you are a burglar on your first adventure we can get you equipped!
 
-## Getting started
+---
+### Index
 
-1. Clone this repository (only this branch)
+[Technologies](#Technologies)
 
-   ```bash
-   git clone https://github.com/appacademy-starters/python-project-starter.git
-   ```
+[Key Features](#Key-Features)
 
-2. Install dependencies
+[Visit Hobbetsy](https://hobbetsy.herokuapp.com/)
 
-      ```bash
-      pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
-      ```
+[Database Schema](https://github.com/jemcodes/hobbetsy/wiki/Database-Schema)
 
-3. Create a **.env** file based on the example with proper settings for your
-   development environment
-4. Setup your PostgreSQL user, password and database and make sure it matches your **.env** file
+[Frontend Routes](https://github.com/jemcodes/hobbetsy/wiki/Front-End-Routes)
 
-5. Get into your pipenv, migrate your database, seed your database, and run your flask app
+[API Routes](https://github.com/jemcodes/hobbetsy/wiki/API-Routes)
 
-   ```bash
-   pipenv shell
-   ```
+[Details](#Details)
 
-   ```bash
-   flask db upgrade
-   ```
+[Feature Spotlight](#Feature-Spotlight)
 
-   ```bash
-   flask seed all
-   ```
+[Code Snippets](#Code-Snippets)
 
-   ```bash
-   flask run
-   ```
+[Hobbetsy Future Roadmap](#Hobbetsy-Future-Roadmap)
 
-6. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
+[Technical Instructions for Project](#Technical-Instructions-for-Project)
 
-***
-*IMPORTANT!*
-   If you add any python dependencies to your pipfiles, you'll need to regenerate your requirements.txt before deployment.
-   You can do this by running:
+[Pre-Project Planning](#Pre-Project-Planning)
 
-   ```bash
-   pipenv lock -r > requirements.txt
-   ```
+[Developers](#Developers)
 
-*ALSO IMPORTANT!*
-   psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
-   There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
-***
+---
+### Technologies
 
-## Deploy to Heroku
+* JavaScript
+* Python
+* Flask
+* JSX
+* CSS
+* SQLAlchemy
+* PostgreSQL
+* Heroku
+* VSCode
+* Docker
+* npm
+* Figma
+* Adobe Photoshop
+* Adobe XD
+* DrawSql
+* DMHeros
+* The Lord of the rings Online
+* notion
 
-1. Create a new project on Heroku
-2. Under Resources click "Find more add-ons" and add the add on called "Heroku Postgres"
-3. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
-4. Run
+### Key Features
+* Product Listings
+* Shopping Cart
+* Comments/Reviews
+* Search 
 
-   ```bash
-   heroku login
-   ```
+### Details
 
-5. Login to the heroku container registry
+>“If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.” ― J. R. R. Tolkien*
 
-   ```bash
-   heroku container:login
-   ```
+Our Hobbetsy Full-Stack Project is a marketplace for heros, and adventurers to outfit themselves before heading out into the great beyond. We are in the business of the unexpected. Life cant hit you with something your unprepared for if you are carrying Hobbetsy Gear. 
 
-6. Update the `REACT_APP_BASE_URL` variable in the Dockerfile.
-   This should be the full URL of your Heroku app: i.e. "https://flask-react-aa.herokuapp.com"
-7. Push your docker container to heroku from the root directory of your project.
-   This will build the dockerfile and push the image to your heroku container registry
+### Visit Hobbetsy
+https://hobbetsy.herokuapp.com/
 
-   ```bash
-   heroku container:push web -a {NAME_OF_HEROKU_APP}
-   ```
+* Search and view products. 
+* Review and purchase products.
 
-8. Release your docker container to heroku
+### Feature Spotlight
+* WE NEED TO DECIDE WHAT WE WHAT WE WANT TO DO HERE.
 
-   ```bash
-   heroku container:release web -a {NAME_OF_HEROKU_APP}
-   ```
+### Code Snippets
 
-9. set up your database:
+* WE NEED TO DECIDE WHAT WE WANT TO SHOW HERE. 
 
-   ```bash
-   heroku run -a {NAME_OF_HEROKU_APP} flask db upgrade
-   heroku run -a {NAME_OF_HEROKU_APP} flask seed all
-   ```
+![Code Snippet](/public/images/code-snippet.png) 
 
-10. Under Settings find "Config Vars" and add any additional/secret .env variables.
+### Hobbetsy Future Roadmap
+- Categories
+- Favorites
+- Refactoring the access to reviews 
+- Dual account user types. Customers and Sellers
+- Better use of gold for a users account. 
+- Create an actual checkout process.
 
-11. profit
+### Technical Instructions for Project
+* Git Clone
+* On local machine, run 'pipenv install' to install required dependenices.
+* Create initial database user and database as stated in .env.example file.
+* Enter your pip enviornment.
+* In terminal flask run to start backend.
+* In a seperate terminal cd into the react app file. 
+* Run npm start. to start the front end server. 
+* This should start new page in your browser. localhost:port in browser.
+
+### Pre-Project Planning
+* Picked and researched a clone and decided on general theme to distinguish
+* Created model schema for database relations with DrawSQL
+* Created a basic wire-frame using Figma
+* Looked for cites to supply data for the product information.
+* Developed a working protocol to track the course of project with notion 
+
+
+### Developers
+* Lisa Noor [Github](https://github.com/Skulllady) [Linkedin](https://www.linkedin.com/in/lisa-noor-hoque-976120208/) 
+* Jamie Sullivan [Github](https://github.com/bilbopicard) [Linkedin](https://www.linkedin.com/in/sullivan-jamie/) 
+* jane Martin [Github](https://github.com/jemcodes) [Linkedin](https://www.linkedin.com/in/jemcodes/) 
+* Patrick Nusbaum [Github](https://github.com/patricknuttree) [Linkedin](https://www.linkedin.com/in/patrick-nusbaum-mpa) 
+
+
+<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Your React App will live here.  While is development, run this application from this location using `npm start`.
+
+
+No environment variables are needed to run this application in development, but be sure to set the REACT_APP_BASE_URL environment variable in heroku!
+
+This app will be automatically built when you deploy to heroku, please see the `heroku-postbuild` script in your `express.js` applications `package.json` to see how this works. -->
