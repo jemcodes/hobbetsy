@@ -28,7 +28,7 @@ const Footer = () => {
                             <div className="footer-dev-name" >Patrick Nusbaum</div>
                         </NavLink>
                         <a className="footer-dev-link" href="https://github.com/patricknuttree" target="_blank">github</a>
-                        <a className="footer-dev-link" href="www.linkedin.com/in/patrick-nusbaum-mpa" target="_blank">linkedin</a>
+                        <a className="footer-dev-link" href="https://www.linkedin.com/in/patrick-nusbaum-mpa" target="_blank">linkedin</a>
                     </div>
                     <div className="footer-dev">
                         <NavLink className="footer-dev-name-link" to="/about">

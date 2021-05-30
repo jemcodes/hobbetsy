@@ -83,9 +83,9 @@ function App() {
         <ProtectedRoute path="/cart" exact={true} >
           <Cart />
         </ProtectedRoute>
-        <ProtectedRoute path="/about" exact={true}>
+        <Route path="/about" exact={true}>
           <About />
-        </ProtectedRoute>
+        </Route>
       </Switch>
     </BrowserRouter>
   );

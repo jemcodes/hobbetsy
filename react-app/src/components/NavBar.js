@@ -22,6 +22,11 @@ const NavBar = () => {
       </div>
       <div id='nav-right-div'>
         <div>
+          <NavLink to='/about' exact={true}>
+            <button>About</button>
+          </NavLink>
+        </div>
+        <div>
           <NavLink to="/cart" exact={true} activeClassName="active">
             <img src={cart} className="cartButton" />
           </NavLink>

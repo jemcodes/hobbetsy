@@ -27,74 +27,74 @@ const About = () => {
                     <div className="about-dev-card">
                         <div className="about-dev-photo-container">
                             <img className="about-dev-image" src={janeHeadshot}></img>
-                        <div className="about-dev-info-container">
-                            <div className="about-dev-name"> jane Martin</div>
-                            <div className="about-dev-link-container">
-                            <a className="about-dev-link" href="https://github.com/jemcodes" target="_blank">github</a>
-                            <a className="about-dev-link" href="https://www.linkedin.com/in/jemcodes/" target="_blank">linkedin</a>
-                            <div className="about-dev-project-links">
-                                <p>Other Apps by the developer:</p>
-                                <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/" target="_blank">travelscape</a>
-                                <a className="about-dev-link" href="https://gin-and-tonnies.herokuapp.com/" target="_blank">Gin and Tonnies</a>
+                            <div className="about-dev-info-container">
+                                <div className="about-dev-name"> jane Martin</div>
+                                <div className="about-dev-link-container">
+                                    <a className="about-dev-link" href="https://github.com/jemcodes" target="_blank">github</a>
+                                    <a className="about-dev-link" href="https://www.linkedin.com/in/jemcodes/" target="_blank">linkedin</a>
+                                    <div className="about-dev-project-links">
+                                        <p>Other Apps by the developer:</p>
+                                        <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/" target="_blank">travelscape</a>
+                                        <a className="about-dev-link" href="https://gin-and-tonnies.herokuapp.com/" target="_blank">Gin and Tonnies</a>
+                                    </div>
+                                </div>
                             </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
                     <div className="about-dev-card">
                         <div className="about-dev-photo-container">
                             <img className="about-dev-image" src={lisaHeadshot}></img>
-                        <div className="about-dev-info-container">
-                            <div className="about-dev-name">Lisa Noor</div>
-                            <div className="about-dev-link">
-                            <div className="about-dev-link-container">
-                                <a className="about-dev-link" href="https://github.com/Skulllady" target="_blank">github</a>
-                                <a className="about-dev-link" href="https://www.linkedin.com/in/lisa-noor-hoque-976120208/" target="_blank">linkedin</a>
-                                <div className="about-dev-project-links">
-                                    <p>Other Apps by the developer:</p>
-                                    <a className="about-dev-link" href="https://brainfood-app.herokuapp.com/users/login" target="_blank">brainfood</a>
-                                    <a className="about-dev-link" href="https://captainslog-2323.herokuapp.com/" target="_blank">captainslog</a>
+                            <div className="about-dev-info-container">
+                                <div className="about-dev-name">Lisa Noor</div>
+                                <div className="about-dev-link">
+                                    <div className="about-dev-link-container">
+                                        <a className="about-dev-link" href="https://github.com/Skulllady" target="_blank">github</a>
+                                        <a className="about-dev-link" href="https://www.linkedin.com/in/lisa-noor-hoque-976120208/" target="_blank">linkedin</a>
+                                        <div className="about-dev-project-links">
+                                            <p>Other Apps by the developer:</p>
+                                            <a className="about-dev-link" href="https://brainfood-app.herokuapp.com/users/login" target="_blank">brainfood</a>
+                                            <a className="about-dev-link" href="https://captainslog-2323.herokuapp.com/" target="_blank">captainslog</a>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
-                            </div>
-                            
-                        </div>
                         </div>
                     </div>
                     <div className="about-dev-card">
                         <div className="about-dev-photo-container">
                             <img className="about-dev-image" src={patrickHeadshot}></img>
-                        <div className="about-dev-info-container">
-                            <div className="about-dev-name">Patrick Nusbaum</div>
-                            <div className="about-dev-link"></div>
-                            <div className="about-dev-link-container">
-                                <a className="about-dev-link" href="https://github.com/patricknuttree" target="_blank">github</a>
-                                <a className="about-dev-link" href="www.linkedin.com/in/patrick-nusbaum-mpa" target="_blank">linkedin</a>
-                                <div className="about-dev-project-links">
-                                    <p>Other Apps by the developer:</p>
-                                    <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/" target="_blank">travelscape</a>
-                                    <a className="about-dev-link" href="https://the-pour.herokuapp.com/" target="_blank">The-Pour</a>
+                            <div className="about-dev-info-container">
+                                <div className="about-dev-name">Patrick Nusbaum</div>
+                                <div className="about-dev-link"></div>
+                                <div className="about-dev-link-container">
+                                    <a className="about-dev-link" href="https://github.com/patricknuttree" target="_blank">github</a>
+                                    <a className="about-dev-link" href="https://www.linkedin.com/in/patrick-nusbaum-mpa" target="_blank">linkedin</a>
+                                    <div className="about-dev-project-links">
+                                        <p>Other Apps by the developer:</p>
+                                        <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/" target="_blank">travelscape</a>
+                                        <a className="about-dev-link" href="https://the-pour.herokuapp.com/" target="_blank">The-Pour</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                     <div className="about-dev-card">
                         <div className="about-dev-photo-container">
                             <img className="about-dev-image" src={jamieHeadshot}></img>
-                        <div className="about-dev-info-container">
-                            <div className="about-dev-name">Jamie Sullivan</div>
-                            <div className="about-dev-link"></div>
-                            <div className="about-dev-link-container">
-                                <a className="about-dev-link" href="https://github.com/bilbopicard" target="_blank">github</a>
-                                <a className="about-dev-link" href="https://www.linkedin.com/in/sullivan-jamie/" target="_blank">linkedin</a>
-                                <div className="about-dev-project-links">
-                                    <p>Other Apps by the developer:</p>
-                                    <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/" target="_blank">travelscape</a>
-                                    <a className="about-dev-link" href="https://app-bottoms-up.herokuapp.com/signup" target="_blank">BottomsUp</a>
+                            <div className="about-dev-info-container">
+                                <div className="about-dev-name">Jamie Sullivan</div>
+                                <div className="about-dev-link"></div>
+                                <div className="about-dev-link-container">
+                                    <a className="about-dev-link" href="https://github.com/bilbopicard" target="_blank">github</a>
+                                    <a className="about-dev-link" href="https://www.linkedin.com/in/sullivan-jamie/" target="_blank">linkedin</a>
+                                    <div className="about-dev-project-links">
+                                        <p>Other Apps by the developer:</p>
+                                        <a className="about-dev-link" href="https://travelscape-app.herokuapp.com/" target="_blank">travelscape</a>
+                                        <a className="about-dev-link" href="https://app-bottoms-up.herokuapp.com/signup" target="_blank">BottomsUp</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
