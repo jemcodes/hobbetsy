@@ -7,7 +7,6 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-main-container">
                 <div id="footer-dev-title">Developers</div>
-                <NavLink className="footer-dev-name-link" to="/about">Click here for more About the Developers</NavLink>
                 <div className="footer-devs-container">
                     <div className="footer-dev">
                         <NavLink className="footer-dev-name-link" to="/about">

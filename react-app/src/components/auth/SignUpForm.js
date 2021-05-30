@@ -45,7 +45,7 @@ const SignUpForm = () => {
     openDoor = true
     setTimeout(() => {
       history.push('/');
-    }, 5000)
+    }, 1000)
   }
 
   return (

@@ -39,7 +39,7 @@ const LoginForm = () => {
     // TODO ZOOM shireZoom = true;
     setTimeout(() => {
       history.push('/');
-    }, 5000)
+    }, 1000)
   }
 
   return (
