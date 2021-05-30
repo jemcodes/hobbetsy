@@ -14,7 +14,7 @@ function ProductRowBottom() {
     const product3 = productList[24];
     const product4 = productList[26];
 
-    console.log(product2)
+    // console.log(product2)
     // console.log(product2.title)
     return (
         <>

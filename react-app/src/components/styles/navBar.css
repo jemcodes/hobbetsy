@@ -103,3 +103,7 @@ font-family: 'Open Sans', sans-serif; */
 #logout-btn:hover {
     cursor: pointer;
 }
+
+#about-btn:hover {
+    cursor: pointer;
+}

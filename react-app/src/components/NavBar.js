@@ -23,7 +23,7 @@ const NavBar = () => {
       <div id='nav-right-div'>
         <div>
           <NavLink to='/about' exact={true}>
-            <button>About</button>
+            <button id="about-btn">About</button>
           </NavLink>
         </div>
         <div>

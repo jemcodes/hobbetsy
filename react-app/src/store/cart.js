@@ -32,7 +32,7 @@ export const displayItems = (id) => async (dispatch) => {
   const response = await fetch(`/api/users/${id}/cart`);
   if (response.ok) {
     const data = await response.json();
-    console.log('THIS IS THE DATA', data)
+    // console.log('THIS IS THE DATA', data)
     dispatch(getItems(data))
   }
 }
@@ -115,7 +115,7 @@ export default function cartReducer(state = initialState, action) {
       nextState = { ...state }
       delete nextState[action.payload]
       return nextState
-   
+
     default:
       return state;
   }

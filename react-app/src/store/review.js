@@ -61,7 +61,7 @@ export const updateReview = (payload) => async (dispatch) => {
         },
         body: JSON.stringify(payload)
     })
-    console.log('RESPONSE DANCE PARTY', response)
+    // console.log('RESPONSE DANCE PARTY', response)
     // if (response.ok) {
     //     const data = await response.json();
     //     dispatch(postReview(data))
@@ -79,7 +79,7 @@ export const deleteReviewThunk = (deletePayload) => async (dispatch) => {
         })
     })
     if (response.ok) {
-        console.log("RESPONSE IS OKAY")
+        // console.log("RESPONSE IS OKAY")
         dispatch(deleteReview(reviewId));
         // return response
         return "ok"
