@@ -14,7 +14,7 @@ function ProductRow() {
     const product3 = productList[2];
     const product4 = productList[5];
 
-    console.log(product2)
+    // console.log(product2)
     // console.log(product2.title)
     return (
         <>

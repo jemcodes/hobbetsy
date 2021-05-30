@@ -15,7 +15,7 @@ export const displayProducts = () => async (dispatch) => {
   const response = await fetch('/api/products/');
   if (response.ok) {
     const data = await response.json();
-    console.log("DATA COMIN FROM STORE", data)
+    // console.log("DATA COMIN FROM STORE", data)
     dispatch(getProducts(data))
   }
 }

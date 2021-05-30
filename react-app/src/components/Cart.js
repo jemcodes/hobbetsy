@@ -18,11 +18,12 @@ function Cart() {
 
 
     const cartList = useSelector(state => {
-        return state.cart.list.map( cartId => state.cart[cartId.id])})
-        // console.log('CHECKING STATE', state.cart[1])
-        // return state.cart[1]
-    console.log(cartList)
-    const userCart = cartList.filter( item => {
+        return state.cart.list.map(cartId => state.cart[cartId.id])
+    })
+    // console.log('CHECKING STATE', state.cart[1])
+    // return state.cart[1]
+    // console.log(cartList)
+    const userCart = cartList.filter(item => {
         return item?.user_id === userId
     })
 
@@ -44,7 +45,7 @@ function Cart() {
             <NavBar />
             <div className="whole-cart-container">
                 <div className="cart-top-container">
-                    
+
                     <div className="cart-username-container">
                         <p className="cart-username">{user.username}'s Cart</p>
                     </div>
@@ -58,10 +59,10 @@ function Cart() {
                     {userCart.map(itemList => (
                         total += itemList.product_price,
                         <div className="cart-item-container">
-                            <CartItem itemList={itemList}/>
+                            <CartItem itemList={itemList} />
                             <hr className="cart-item-separator" />
                         </div>
-                        ))}
+                    ))}
                 </div>
                 <hr className="cart-item-separator" />
                 <div className="cart-bottom-container">
