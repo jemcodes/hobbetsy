@@ -240,6 +240,22 @@ def seed_products():
         lore='Rumor has it that the blade glows when orcs are near...',
         category_id=5
     )
+    mithril_shirt = Product(
+        title='Mithril Shirt',
+        image='https://images.metmuseum.org/CRDImages/aa/mobile-large/DP147287.jpg',
+        price=10000,
+        description='Forged in forgotten ways by dwarves of old... Mithril was common then but the dwarves delved deeper into the earth to find even more.  This did not turn out well for the dwarves.',
+        lore='This armor protected Frodo.',
+        category_id=5
+    )
+    palantir = Product(
+        title='Palantir',
+        image='https://images.unsplash.com/photo-1506808940319-a472563bebee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1510&q=80',
+        price=7000,
+        description='Used as an ancient form of communication across vast distances.  The Dark Lord used these to corrupt the weak-minded.',
+        lore='A bad time in the wrong hands',
+        category_id=5
+    )
 
     """HORSES"""
     """MAGIC"""
@@ -278,6 +294,8 @@ def seed_products():
     db.session.add(anduril)
     db.session.add(glamdring)
     db.session.add(sting)
+    db.session.add(mithril_shirt)
+    db.session.add(palantir)
 
     db.session.commit()
 
