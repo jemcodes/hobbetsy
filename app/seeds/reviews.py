@@ -5,9 +5,9 @@ def seed_reviews():
 
     One = Review(
         rating=4, review="I wish I could go back in time and buy this again.", user_id=1, product_id=1)
-    Two = Review(rating=5, review="Best sh*t ever", user_id=2, product_id=2)
+    Two = Review(rating=5, review="Best sh*t ever", user_id=20, product_id=2)
     Three = Review(
-        rating=1, review="They stole my gold! Don't buy this! It's a scam!", user_id=2, product_id=2)
+        rating=1, review="They stole my gold! Don't buy this! It's a scam!", user_id=13, product_id=2)
     Four = Review(
         rating=3, review="Dear fellow conspirators, this item is no good.", user_id=3, product_id=3)
     Five = Review(
@@ -37,7 +37,7 @@ def seed_reviews():
         rating=4, review="I needed a sword for my halloween costume and this was perfect. I suppose instead of candy, I could give out gold coins to the little trick of treaters that come to the Lonely Mountain. Oh, I cannot wait to lure them in!", user_id=14, product_id=2)
     Nineteen = Review(rating=5, review="The handle broke clean off the blade with literally just 5 minutes of play from my son. I didn't expect it to last forever but it should have lasted longer than that!", user_id=2, product_id=2)
     Twenty = Review(rating=5, review="Quick delivery, arrived just as pictured!",
-                    user_id=2, product_id=2)
+                    user_id=29, product_id=2)
     TwentyOne = Review(
         rating=3, review="Made well and not at all flimsy.", user_id=3, product_id=2)
     TwentyTwo = Review(
