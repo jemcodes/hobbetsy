@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { checkOutCart } from "../store/cart"
+import './styles/checkout.css';
 
 
 export default function Checkout({ }) {
@@ -23,7 +24,7 @@ export default function Checkout({ }) {
     return (
         <>
             <form onSubmit={checkoutButton}>
-                <button type="submit">Check Out</button>
+                <button className="checkout-button" type="submit">Check Out</button>
             </form>
         </>
     )

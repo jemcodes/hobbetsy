@@ -28,8 +28,9 @@ font-family: 'Open Sans', sans-serif; */
 }
 
 .citem-pic{
-    min-width: 100%;
-    max-height: 100%;
+    /* width: 900px; */
+    height: auto;
+    width: 100%;
 }
 
 .citem-info-container{
@@ -58,6 +59,7 @@ font-family: 'Open Sans', sans-serif; */
     width: 100%;
 }
 
+
 #checkout-price{
     padding-left: 20px;
     font-size: 60px;
@@ -70,6 +72,7 @@ font-family: 'Open Sans', sans-serif; */
 }
 
 .citem-removebutton{
+    cursor: pointer;
     max-width: 100%;
 }
 
