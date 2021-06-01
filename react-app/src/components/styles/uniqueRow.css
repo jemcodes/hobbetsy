@@ -57,7 +57,7 @@ body {
 }
 
 .unique-row-top-div-inner p{
-    /* font-family: 'Almendra', serif; */
+    font-family: 'Almendra', serif;
     text-align: center;
     padding-left: 5%;
     margin: 10px 0 10px;
