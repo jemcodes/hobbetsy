@@ -1,5 +1,5 @@
 # Flask React Project
-<!-- PATRICK IS A GOOBER -->
+<!-- PATRICK IS A GOOBER NOT A BUTTHOLE-->
 This is the backend for the Flask React project.
 
 ## Getting started
