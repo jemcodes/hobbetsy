@@ -10,6 +10,7 @@ import '../styles/auth.css';
 
 const SignUpForm = () => {
   const [username, setUsername] = useState("");
+  const [errors, setErrors] = useState([])
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
@@ -20,7 +21,12 @@ const SignUpForm = () => {
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      await dispatch(signUp(username, email, password));
+      const formData = await dispatch(signUp(username, email, password));
+      if (formData.errors) {
+        setErrors(formData.errors)
+      }
+    } else {
+      setErrors(["Passwords must match"])
     }
   };
 
@@ -61,6 +67,11 @@ const SignUpForm = () => {
         </div>
         <div className="form-container">
           <form onSubmit={onSignUp}>
+            <div className="error-container">
+              {errors.map((error, idx) => (
+                <div className="signup-error-messages" key={idx}>{error}</div>
+              ))}
+            </div>
             <div>
               <label>User Name</label>
               <input

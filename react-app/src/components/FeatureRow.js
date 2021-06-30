@@ -23,7 +23,7 @@ function FeatureRow() {
                         <h4>{feature1?.title}</h4>
                         <img src={feature1?.image} />
                         <p id='lore'>{feature1?.lore}</p>
-                        <p><span class='guarani'>₲</span>{feature1?.price}</p>
+                        <p><span className='guarani'>₲</span>{feature1?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${feature2?.id}`}>
@@ -31,7 +31,7 @@ function FeatureRow() {
                         <h4>{feature2?.title}</h4>
                         <img src={feature2?.image} />
                         <p id='lore'>{feature2?.lore}</p>
-                        <p><span class='guarani'>₲</span>{feature2?.price}</p>
+                        <p><span className='guarani'>₲</span>{feature2?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${feature3?.id}`}>
@@ -39,7 +39,7 @@ function FeatureRow() {
                         <h4>{feature3?.title}</h4>
                         <img src={feature3?.image} />
                         <p id='lore'>{feature3?.lore}</p>
-                        <p><span class='guarani'>₲</span>{feature3?.price}</p>
+                        <p><span className='guarani'>₲</span>{feature3?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${feature4?.id}`}>
@@ -47,7 +47,7 @@ function FeatureRow() {
                         <h4>{feature4?.title}</h4>
                         <img src={feature4?.image} />
                         <p id='lore'>{feature4?.lore}</p>
-                        <p><span class='guarani'>₲</span>{feature4?.price}</p>
+                        <p><span className='guarani'>₲</span>{feature4?.price}</p>
                     </div>
                 </NavLink>
             </div>

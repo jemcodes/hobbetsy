@@ -19,9 +19,9 @@ function SingleReview({ review, productId }) {
     const deleteButton = (e) => {
         e.preventDefault()
         const payload = {
-            userId:user.id,
-            productId:productId,
-            reviewId:review.id
+            userId: user.id,
+            productId: productId,
+            reviewId: review.id
         }
         dispatch(deleteReviewThunk(payload))
     }
@@ -30,7 +30,7 @@ function SingleReview({ review, productId }) {
         if (review?.rating === 5) {
             review.ratingImages =
                 <div>
-                    <img src={sword} alt={`Small sword`}/>
+                    <img src={sword} alt={`Small sword`} />
                     <img src={sword} alt={`Small sword`} />
                     <img src={sword} alt={`Small sword`} />
                     <img src={sword} alt={`Small sword`} />
@@ -77,7 +77,7 @@ function SingleReview({ review, productId }) {
             </div>
             <div id="single-review">{review?.review}</div>
             <div id="single-review-btns">
-                {user.id === review?.user_id && <button class="review-edit-btn" id={review?.id} onClick={editButton}>Edit</button>}
+                {user.id === review?.user_id && <button className="review-edit-btn" id={review?.id} onClick={editButton}>Edit</button>}
                 {user.id === review?.user_id && <button id="review-delete-btn" onClick={deleteButton}>Delete</button>}
                 {editable && <EditReviewForm reviewId={review?.id} editable={editable} setEditable={setEditable} />}
             </div>

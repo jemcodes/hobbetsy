@@ -30,7 +30,7 @@ font-family: 'Open Sans', sans-serif; */
 }
 #outer-search-div {
     width: 40%;
-    margin-left: 10vw;
+    /* margin-left: 10vw; */
     /* border: 3px solid red; */
 }
 
@@ -51,12 +51,13 @@ font-family: 'Open Sans', sans-serif; */
 }
 
 #nav-right-div{
-    width: 20%;
+    width: fit-content;
     display: flex;
     justify-content: flex-end;
     /* border: 2px solid red; */
     align-items: center;
     margin-right: 0;
+    margin-left: 40px;
 }
 
 #search-results-div {
