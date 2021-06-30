@@ -26,7 +26,7 @@ function UniqueRow() {
                         <h4>{product1?.title}</h4>
                         <img src={product1?.image} />
                         <p className='unique-lore'>{product1?.lore}</p>
-                        <p><span class='guarani'>₲</span>{product1?.price}</p>
+                        <p><span className='guarani'>₲</span>{product1?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${product5?.id}`}>
@@ -34,7 +34,7 @@ function UniqueRow() {
                         <h4>{product5?.title}</h4>
                         <img id='potatoes' src={product5?.image} />
                         <p className='unique-lore'>{product5?.lore}</p>
-                        <p><span class='guarani'>₲</span>{product5?.price}</p>
+                        <p><span className='guarani'>₲</span>{product5?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${product6?.id}`}>
@@ -42,7 +42,7 @@ function UniqueRow() {
                         <h4>{product6?.title}</h4>
                         <img id='mithril' src={product6?.image} />
                         <p className='unique-lore'>{product6?.lore}</p>
-                        <p><span class='guarani'>₲</span>{product6?.price}</p>
+                        <p><span className='guarani'>₲</span>{product6?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${product7?.id}`}>
@@ -50,7 +50,7 @@ function UniqueRow() {
                         <h4>{product7?.title}</h4>
                         <img id='mithril' src={product7?.image} />
                         <p className='unique-lore'>{product7?.lore}</p>
-                        <p><span class='guarani'>₲</span>{product7?.price}</p>
+                        <p><span className='guarani'>₲</span>{product7?.price}</p>
                     </div>
                 </NavLink>
             </div>
@@ -60,7 +60,7 @@ function UniqueRow() {
                         <h4>{product3?.title}</h4>
                         <img src={product3?.image} />
                         <p className='unique-lore'>{product3?.lore}</p>
-                        <p><span class='guarani'>₲</span>{product3?.price}</p>
+                        <p><span className='guarani'>₲</span>{product3?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${product4?.id}`}>
@@ -68,7 +68,7 @@ function UniqueRow() {
                         <h4>{product4?.title}</h4>
                         <img src={product4?.image} />
                         <p className='unique-lore'>{product4?.lore}</p>
-                        <p><span class='guarani'>₲</span>{product4?.price}</p>
+                        <p><span className='guarani'>₲</span>{product4?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${product2?.id}`}>
@@ -76,7 +76,7 @@ function UniqueRow() {
                         <h4>{product2?.title}</h4>
                         <img src={product2?.image} />
                         <p className='unique-lore'>{product2?.lore}</p>
-                        <p><span class='guarani'>₲</span>{product2?.price}</p>
+                        <p><span className='guarani'>₲</span>{product2?.price}</p>
                     </div>
                 </NavLink>
             </div>
@@ -86,28 +86,28 @@ function UniqueRow() {
                     <div className='product-row-bottom-div-inner'>
                         <h4>{product1?.title}</h4>
                         <img src={product1?.image} />
-                        <p><span class='guarani'>₲</span>{product1?.price}</p>
+                        <p><span className='guarani'>₲</span>{product1?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${product2?.id}`}>
                     <div className='product-row-bottom-div-inner'>
                         <h4>{product2?.title}</h4>
                         <img src={product2?.image} />
-                        <p><span class='guarani'>₲</span>{product2?.price}</p>
+                        <p><span className='guarani'>₲</span>{product2?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${product3?.id}`}>
                     <div className='product-row-bottom-div-inner'>
                         <h4>{product3?.title}</h4>
                         <img src={product3?.image} />
-                        <p><span class='guarani'>₲</span>{product3?.price}</p>
+                        <p><span className='guarani'>₲</span>{product3?.price}</p>
                     </div>
                 </NavLink>
                 <NavLink to={`/products/${product4?.id}`}>
                     <div className='product-row-bottom-div-inner'>
                         <h4>{product4?.title}</h4>
                         <img src={product4?.image} />
-                        <p><span class='guarani'>₲</span>{product4?.price}</p>
+                        <p><span className='guarani'>₲</span>{product4?.price}</p>
                     </div>
                 </NavLink>
             </div> */}
