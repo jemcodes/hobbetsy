@@ -22,6 +22,7 @@ h1#hobbetsy-title {
 
 #auth-nav-btn {
   margin-bottom: 0;
+  min-width: 100px;
 }
 
 .form-image-container{
@@ -91,11 +92,29 @@ h1#hobbetsy-title {
   margin-top: 100px;
   margin-bottom: 10px;
   padding: 2rem;
-  width: 30%;
+  width: 40%;
   font-family: 'Almendra', cursive;
   font-size: 25px;
   transition: transform .5s ease-in;
   border-radius: 3px;
+  min-width: 564px;
+}
+
+label{
+  text-align: right;
+}
+
+.error-container{
+  margin-bottom: 20px;
+}
+
+.signup-error-messages{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  text-align: center;
 }
 
 .form-container:hover {
