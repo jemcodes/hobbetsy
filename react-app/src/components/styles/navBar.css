@@ -16,9 +16,9 @@ font-family: 'Open Sans', sans-serif; */
     z-index: 1  ;
 }
 
-#nav-right-div a{
+/* #nav-right-div a{
     margin-right: 4vw;
-} 
+}  */
 
 #nav-right-div button{
     width: 100px;
@@ -51,9 +51,9 @@ font-family: 'Open Sans', sans-serif; */
 }
 
 #nav-right-div{
-    width: fit-content;
+    width: 24%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     /* border: 2px solid red; */
     align-items: center;
     margin-right: 0;
@@ -107,4 +107,24 @@ font-family: 'Open Sans', sans-serif; */
 
 #about-btn:hover {
     cursor: pointer;
+}
+
+#nav-right-div a{
+    text-decoration: none;
+}
+
+#cart-div {
+    display: flex;
+    align-items: center;
+}
+
+#cart-div p {
+    text-decoration: none;
+    color: rgba(1, 101, 68, 1);
+    font-size: 1.2rem;
+    padding-top: 20px;
+}
+
+.cartButton {
+    margin-top: 6px;
 }

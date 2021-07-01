@@ -27,7 +27,7 @@ function SingleProduct() {
                     <p id="single-prod-price"><span id="single-prod-guarani">₲</span>{product.price}</p>
                     <p>{product.description}</p>
                     <div id="single-prod-add-btn">
-                        <AddingToCart />
+                        <AddingToCart title={product.title} />
                     </div>
                 </div>
             </div>

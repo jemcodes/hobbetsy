@@ -2,16 +2,18 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { deleteItemsFromCart } from "../store/cart"
+import { displayItems } from '../store/cart';
 import './styles/cartItems.css';
 
 
-export default function CartItem({ itemList }){
+export default function CartItem({ itemList }) {
 
     const dispatch = useDispatch();
     const productId = itemList?.product_id
     // console.log("ARE YOU A NUMBER",productId)
     const userId = useSelector(state => state.session.user.id)
     const cartId = itemList?.id
+
     const removeItemButton = (e) => {
         e.preventDefault()
         const payload = {
@@ -20,6 +22,7 @@ export default function CartItem({ itemList }){
             cartId
         }
         dispatch(deleteItemsFromCart(payload))
+        dispatch(displayItems(userId));
     }
 
     return (

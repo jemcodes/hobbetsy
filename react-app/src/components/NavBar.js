@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
+import { useSelector, useDispatch } from 'react-redux';
 import Search from './Search';
+import { displayItems } from '../store/cart';
 import Cart from './Cart';
 import DemoUser from './auth/DemoUser';
 import cart from '../images/yeoldecart.png';
@@ -10,6 +12,18 @@ import logo from '../images/hobbetsylogoNB.png';
 
 
 const NavBar = () => {
+
+  const dispatch = useDispatch();
+  const userId = useSelector(state => state.session.user.id)
+
+  const cartList = useSelector(state => {
+    return state.cart.list.map(cartId => state.cart[cartId.id])
+  })
+
+  useEffect(() => {
+    dispatch(displayItems(userId));
+  }, [dispatch, userId])
+
   return (
     <nav className="navContainer">
       <div>
@@ -28,7 +42,10 @@ const NavBar = () => {
         </div>
         <div>
           <NavLink to="/cart" exact={true} activeClassName="active">
-            <img src={cart} className="cartButton" />
+            <div id='cart-div'>
+              <img src={cart} className="cartButton" />
+              <p>{cartList.length}</p>
+            </div>
           </NavLink>
         </div>
         <div>
