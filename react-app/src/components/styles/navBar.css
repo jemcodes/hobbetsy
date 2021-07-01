@@ -22,7 +22,7 @@ font-family: 'Open Sans', sans-serif; */
 
 #nav-right-div button{
     width: 100px;
-} 
+}
 
 .main-logo{
     max-height: 150px;
@@ -121,8 +121,9 @@ font-family: 'Open Sans', sans-serif; */
 #cart-div p {
     text-decoration: none;
     color: rgba(1, 101, 68, 1);
-    font-size: 1.2rem;
+    font-size: 2rem;
     padding-top: 20px;
+    font-family: 'Almendra', serif;
 }
 
 .cartButton {
