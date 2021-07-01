@@ -7,7 +7,7 @@ import './styles/cartItems.css';
 
 
 export default function CartItem({ itemList }) {
-
+    const [toggle, setToggle] = useState(true);
     const dispatch = useDispatch();
     const productId = itemList?.product_id
     // console.log("ARE YOU A NUMBER",productId)
@@ -21,9 +21,14 @@ export default function CartItem({ itemList }) {
             userId,
             cartId
         }
+        alert(`Are you sure?!`)
         dispatch(deleteItemsFromCart(payload))
-        dispatch(displayItems(userId));
+        setToggle(!toggle);
     }
+
+    useEffect(() => {
+        dispatch(displayItems(userId));
+    }, [dispatch, toggle])
 
     return (
         <div>

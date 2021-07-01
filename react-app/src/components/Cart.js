@@ -12,9 +12,9 @@ function Cart() {
     const dispatch = useDispatch();
     const userId = useSelector(state => state.session.user.id)
 
-    useEffect(() => {
-        dispatch(displayItems(userId));
-    }, [dispatch, userId])
+    // useEffect(() => {
+    //     dispatch(displayItems(userId));
+    // }, [dispatch, userId])
 
 
     const cartList = useSelector(state => {
@@ -42,7 +42,7 @@ function Cart() {
 
     return (
         <div>
-            <NavBar />
+            <NavBar userCart={userCart}/>
             <div className="whole-cart-container">
                 <div className="cart-top-container">
 

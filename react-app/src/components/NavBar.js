@@ -11,7 +11,7 @@ import "./styles/navBar.css"
 import logo from '../images/hobbetsylogoNB.png';
 
 
-const NavBar = () => {
+const NavBar = ({ userCart }) => {
 
   const dispatch = useDispatch();
   const userId = useSelector(state => state.session.user.id)
@@ -44,7 +44,7 @@ const NavBar = () => {
           <NavLink to="/cart" exact={true} activeClassName="active">
             <div id='cart-div'>
               <img src={cart} className="cartButton" />
-              <p>{cartList.length}</p>
+              <p>{userCart ? userCart.length : cartList.length}</p>
             </div>
           </NavLink>
         </div>
