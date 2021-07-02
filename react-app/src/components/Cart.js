@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { displayItems } from '../store/cart';
 import CartItem from './CartItem';
 import Checkout from './Checkout';
 import NavBar from './NavBar';
@@ -69,9 +68,9 @@ function Cart() {
                     <div className="checkout-price-container">
                         <h3 id="checkout-price">TOTAL PRICE: ₲ {total}</h3>
                     </div>
-
+                    
                     <div className="checkout-button-container">
-                        <Checkout />
+                        {total > 0 ? <Checkout /> : <NavLink to="/" exact={true} activeClassName="active"> Home </NavLink>}
                     </div>
                 </div>
             </div>
