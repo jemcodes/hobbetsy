@@ -16,6 +16,7 @@ import CreateReview from "./components/CreateReview";
 import EditReview from "./components/EditReview";
 import Favorite from "./components/Favorite";
 import About from "./components/About"
+import OrderConfirmation from "./components/OrderConfirmation";
 import { displayProducts } from './store/product';
 import { displayItems } from './store/cart'
 import { authenticate } from "./store/session";
@@ -85,6 +86,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/about" exact={true}>
           <About />
+        </ProtectedRoute>
+        <ProtectedRoute path="/confirmation" exact={true}>
+          <OrderConfirmation />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

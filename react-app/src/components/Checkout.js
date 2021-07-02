@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { checkOutCart } from "../store/cart"
 import './styles/checkout.css';
 
@@ -9,6 +9,7 @@ export default function Checkout({ }) {
     const dispatch = useDispatch();
     const productId = parseInt(useParams().productId);
     const userId = useSelector(state => state.session.user.id)
+    const history = useHistory()
 
     //quantity and price
 
@@ -19,6 +20,7 @@ export default function Checkout({ }) {
             userId
         }
         dispatch(checkOutCart(payload))
+        history.push('/confirmation')
     }
 
     return (

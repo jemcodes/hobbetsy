@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Open+Sans&display&family=Almendra&display=swap');
+
+
+#confirmation-container-outer{
+    /* border: 3px solid red; */
+    height: 100vh;
+}
+
+#confirmation-container-inner{
+    /* border: 3px solid yellow; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirmation-container-inner h3{
+    /* border: 3px solid blue; */
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Almendra', serif;
+    color: #016544;
+    /* margin-bottom: 50%; */
+}
+
+#confirmation-container-inner a{
+    margin: 0;
+    /* height: 10vh; */
+    background-color: #016544;
+    width: 100px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    border-radius: 40px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-decoration: none;
+}
+

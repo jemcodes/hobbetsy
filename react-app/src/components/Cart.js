@@ -43,7 +43,7 @@ function Cart() {
     return (
         <div>
             <NavBar userCart={userCart}/>
-            <div className="whole-cart-container">
+            <div id="cart-container-outer">
                 <div className="cart-top-container">
 
                     <div className="cart-username-container">
@@ -75,7 +75,9 @@ function Cart() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <div id="cart-footer-container">
+                <Footer />
+            </div>
         </div>
     )
 }
