@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Open+Sans&display&family=Almendra&display=swap');
 /* font-family: 'Almendra', serif; */
 /* font-family: 'Almendra Display', cursive; */
-/* font-family: 'Open Sans', sans-serif; */ */
+/* font-family: 'Open Sans', sans-serif; */ 
 
-.whole-cart-container{
+#cart-container-outer{
+    /* border: 3px solid red; */
+    height: 100vh;
 }
 
 .cart-top-container{
@@ -78,4 +80,8 @@ color: #016544;
     border-color: rgb(1, 101, 68);
     border-width: 0 0 1px 0;
     border-radius: 20px;
+}
+
+#cart-footer-container{
+    bottom: 0;
 }
