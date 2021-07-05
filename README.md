@@ -1,5 +1,5 @@
 # Welcome to Hobbetsy!
-![Hobbetsy Logo](react-app/src/images/hobbetsy_logo.png)
+<img src="react-app/src/images/hobbetsy_logo.png" width="250" height="250">
 
 ### Hobbetsy is an app dedicated to making sure that all people in Middle-earth are equipped to face whatever life can throw at them. Be it a Balrog in the depths of Moria or you are a burglar on your first adventure we can get you equipped!
 
