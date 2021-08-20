@@ -62,8 +62,8 @@ function CreateReview() {
                         onChange={updateReview}
                         value={review}
                     />
-                <button id="create-review-btn" type="submit">Submit Review</button>
                 </div>
+                <button id="create-review-btn" type="submit">Submit Review</button>
             </div>
         </form>
     )

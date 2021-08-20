@@ -206,7 +206,7 @@ div#single-review-rating {
     padding: 0 0 1rem 1rem;
     width: 30vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
 }
 
@@ -237,9 +237,9 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 0 0 1rem 1rem;
     width: 30vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    border: 5px solid rgba(188, 224, 69, 0.4);
+    /* border: 5px solid rgba(188, 224, 69, 0.4); */
 }
 
 #review-input {
@@ -260,18 +260,19 @@ input[type=number]::-webkit-outer-spin-button {
 
 #create-review-btn {
     background-color: #016544;
-    /* border: 2px solid #016544; */
+    border: 2px solid #016544;
     margin: 0 auto;
-    width: 20vw;
+    width: 30vw;
+    height: 3vw;
     padding: 0.5rem;
     color: white;
     text-align: center;
     font-size: .8em;
     font-weight: bolder;
-    /* border-radius: 40px; */
+    border-radius: 40px;
     font-family: 'Open Sans', sans-serif;
-    border: 5px solid rgba(195, 23, 23, 0.4);
-
+    align-items: flex-end;
+    /* border: 5px solid rgb(19, 160, 185); */
 }
 
 #create-review-btn:hover {
