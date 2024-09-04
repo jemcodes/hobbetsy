@@ -10,8 +10,6 @@
 
 [Key Features](#Key-Features)
 
-[Visit Hobbetsy](https://hobbetsy.herokuapp.com/)
-
 [Database Schema](https://github.com/jemcodes/hobbetsy/wiki/Database-Schema)
 
 [Frontend Routes](https://github.com/jemcodes/hobbetsy/wiki/Front-End-Routes)
@@ -66,9 +64,6 @@
 >“If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.” ― J. R. R. Tolkien*
 
 Our Hobbetsy Full-Stack Project is a marketplace for heroes and adventurers to outfit themselves before heading out into the great beyond. We are in the business of the unexpected. Life can't hit you with something you're unprepared for if you are carrying Hobbetsy Gear. 
-
-### Visit Hobbetsy
-https://hobbetsy.herokuapp.com/
 
 ### Feature Spotlight
 * Shopping Cart
